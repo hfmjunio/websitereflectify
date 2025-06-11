@@ -1,0 +1,69 @@
+body {
+  background: #FFC632;
+  background: linear-gradient(180deg, rgba(255, 198, 50, 1) 0%, rgba(128, 0, 0, 1) 100%);
+  background-attachment: fixed;
+}
+
+
+img {
+  padding-top: 75px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  filter: drop-shadow(0 0 0.75rem #705a13);
+  display: block;
+  border: none;
+  
+}
+
+
+h1 {
+  color: #FFC632;
+  font-family: "Tilt Warp", sans-serif;
+  font-size: 57px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.04in;
+  filter: drop-shadow(0 0 0.75rem #702a01);
+}
+
+h2 {
+  color: #ffffff;
+  font-family: "Tilt Warp", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.01in;
+  font-weight: normal;
+  text-align: center;
+  filter: drop-shadow(0 0 0.75rem rgb(117, 49, 9));
+}
+
+h3 {
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  text-align: center;
+  filter: drop-shadow(0 0 0.75rem maroon);
+}
+
+.wpbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.proceedbtn {
+  background-color: rgb(255, 255, 255);
+  font-family: "Tilt Warp", sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  border-radius: 10px;
+  border: none;
+  color: #800000;
+  filter: drop-shadow(0 0 0.75rem maroon);
+  padding: 10px;
+  width: 550px;
+  margin-top: 50px;
+}
+
