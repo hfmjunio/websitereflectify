@@ -1,0 +1,196 @@
+    /* SIGN UP PAGE */
+    .signup-root {
+    min-height: 100vh;
+    background: #800000;
+    }
+    
+
+    .reflogo {
+    padding-top: 1%;
+    margin: 0.2rem auto 0.8rem auto;
+    text-align: center;
+    font-family: "Tilt Warp", sans-serif;
+    font-weight: 900;
+    font-size: 6vw;
+    color: #FFC632;
+    letter-spacing: 0.01in;
+    filter: drop-shadow(0 0 0.75rem #702a01);
+    }
+
+    .SignUp {
+    background-color: #ffffff;
+    margin: 0.5rem auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 0.75rem #702a01);
+
+    }
+
+    div.SignUp h2 {
+    color: #800000;
+    font-family: "Tilt Warp", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0 0 0.4rem 0;
+    filter: none;
+    letter-spacing: 0in;
+
+    }
+
+    div.SignUp h3 {
+    color: #A9A297;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    filter: none;
+    }
+
+    div.SignUp h4 {
+    color: #800000;
+    font-family: "Tilt Warp", sans-serif;
+    font-size: 1.05rem;
+    padding-left: 0.1rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.3rem;
+    }
+
+    /* Input field appearance */
+    div.SignUp input {
+    background-color: #E9E9E9;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.65rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.7rem;
+    }
+
+    /* Placeholder */
+    div.SignUp input::placeholder {
+    color: #888888;
+    font-size: 1rem;
+    opacity: 1;
+    font-style: italic;
+    }
+
+    .name-row {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+    }
+
+    .name-field {
+    flex: 1;
+    min-width: 140px;
+    }
+
+    .role-options {
+    display: flex;
+    gap: 1rem;
+    margin: 0.8rem 0;
+    align-items: center;
+    }
+
+    .role-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: #800000;
+    font-size: 0.95rem;
+    line-height: 1;
+    position: relative;
+    }
+
+    /* Custom radio buttons */
+    input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #800000;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    }
+
+    input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #800000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .createacc-btn {
+    display: block;
+    width: 50%;
+    padding: 0.7rem;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem auto 0.5rem auto;
+    cursor: pointer;
+    }
+
+    .primary-btn:hover {
+    background-color: #a00000;
+    }
+
+    .alrhanacc {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+    }
+
+    .signin-link {
+    color: #800000;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+    .reflogo {
+        font-size: 2rem;
+    }
+
+    .SignUp {
+        width: 60%;
+    }
+
+    div.SignUp h2 {
+        font-size: 2rem;
+    }
+
+    div.SignUp h3 {
+        font-size: 1rem;
+    }
+
+    div.SignUp h4 {
+        font-size: 1.2rem;
+    }
+
+    div.reflogo img {
+        width: 30px;
+    }
+    }
