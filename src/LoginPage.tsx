@@ -1,32 +1,58 @@
-    import ReflectifyLogo from './assets/reflogo.png'; // Update path if needed
-    import './LoginPage.css'; // Your external CSS file
-    import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import ReflectifyLogo from './assets/reflogo.png';
+import './LoginPage.css';
 
-    export default function LoginPage() {
+export default function LoginPage() {
+  const navigate = useNavigate();
 
-        const navigate = useNavigate()
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO: Add login logic here
+    navigate('/signup');
+  };
 
-  const handleLogin = () => {
-    navigate('/signup')
-  }
-    return (
-        <div className="login-container">
-        <div className="left-panel">
-            <img src={ReflectifyLogo} alt="Reflectify Logo" className="logo" />
-            <h1>Reflectify</h1>
-        </div>
-        <div className="right-panel">
-            <h2>Welcome Back</h2>
-            <h3>Hello there, log in to continue</h3>
-            <form>
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
-            <button type="submit">Log In</button>
-            <p className="donthanacc">
-            Don't have an account? <span className="signin-link" onClick={handleLogin}>Sign Up</span>
+  return (
+    <div className="login-container">
+      {/* Left Panel */}
+      <div className="left-panel">
+        <img src={ReflectifyLogo} alt="Reflectify Logo" className="logo" />
+        <h1 className="reflectify">Reflectify</h1>
+      </div>
+
+      {/* Right Panel */}
+      <div className="right-panel">
+        <h1 className="welcome-title">Welcome Back</h1>
+        <h3 className="welcome-subtitle">Hello there, log in to continue</h3>
+
+        <form onSubmit={handleLogin}>
+          <label className="input-label">Email</label>
+          <input
+            type="email"
+            placeholder="Ex. j.delacruz@student.tsu.edu.ph"
+            required
+          />
+
+          <label className="input-label">Password</label>
+          <input
+            type="password"
+            placeholder="At least 8 characters"
+            required
+          />
+
+          <div className="forgot-link">
+            <span>Forgot Password?</span>
+          </div>
+
+          <button type="submit">Log In</button>
+
+          <p className="donthanacc">
+            Don't have an account?{" "}
+            <span className="signin-link" onClick={handleLogin}>
+              Sign Up
+            </span>
           </p>
-            </form>
-        </div>
-        </div>
-    );
-    }
+        </form>
+      </div>
+    </div>
+  );
+}

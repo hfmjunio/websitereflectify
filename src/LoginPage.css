@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Tilt+Warp&display=swap');
+
+    body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    }
+
     /* Layout */
     .login-container {
     display: flex;
@@ -8,29 +15,32 @@
     /* Left Panel */
     .left-panel {
     background-color: #800000;
-    color: #FFC632;
-    flex: 1;
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    font-family: "Tilt Warp", sans-serif;
+    }
+
+    .right-panel h3 {
+    font-weight: 100;
     }
 
     .logo {
-    max-width: 200px;
+    max-width: 150px;
     margin-bottom: 1rem;
-    filter: drop-shadow(0 0 0.5rem #000);
+    filter: none;
     }
 
-    .left-panel h1 {
-    font-family: "Tilt Warp", sans-serif;
-    font-size: 4.5rem;
+    .reflectify {
+    font-size: 5rem;
     letter-spacing: 0.05em;
-    text-shadow: 0 0 5px #000;
+    font-weight: lighter;
     }
 
-    /* Right Panel */
+    /* Right Panel Fix */
     .right-panel {
     flex: 1;
     background-color: #ffffff;
@@ -38,33 +48,72 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     }
 
-    .right-panel h2 {
+    .welcome-title {
+    font-family: "Tilt Warp", sans-serif;
     font-size: 2rem;
     color: #800000;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.25rem;
+    filter: none;
+    letter-spacing: 0.1rem;
+    padding-left: 0;
+    }
+
+    .welcome-subtitle {
+    font-family: "Tilt Warp", sans-serif;
+    color: #A9A297;
+    font-weight: bold;
+    margin-bottom: 1rem;
     filter: none;
     }
 
-    .right-panel h3 {
-        filter: none;
-        color: #A9A297;
-        font-weight: lighter;
+    /* Form */
+    form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .input-label {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Tilt Warp", sans-serif;
+    font-size: 1.2rem;
+    color: #800000;
+    margin: 0.25rem 0 0.2rem 0;
     }
 
     form input {
     width: 100%;
+    height: 1.1rem;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1rem;
+    font-style: italic;
+    border: none;
+    background-color: #E9E9E9;
     }
 
     form input:focus {
-    border-color: #800000;
+    border: 2px solid #800000;
     outline: none;
+    }
+
+    .forgot-link {
+    width: 100%;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #800000;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 600;
     }
 
     form button {
@@ -77,10 +126,24 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    margin-bottom: 1rem;
     }
 
     form button:hover {
     background-color: #a00000;
+    }
+
+    .donthanacc {
+    font-family: "Tilt Warp", sans-serif;
+    text-align: center;
+    font-size: 0.95rem;
+    }
+
+    .signin-link {
+    color: #800000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.25rem;
     }
 
     /* Responsive */
@@ -91,15 +154,19 @@
 
     .left-panel, .right-panel {
         flex: none;
-        width: 100%;
+        width: auto;
         height: auto;
     }
 
     .left-panel {
-        padding: 1.5rem;
+        padding: 0.4rem;
     }
 
     .right-panel {
         padding: 1.5rem;
+    }
+
+    .reflectify {
+        font-size: 2.5rem;
     }
     }

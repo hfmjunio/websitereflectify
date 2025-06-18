@@ -1,88 +1,95 @@
-    /* SIGN UP PAGE */
+    /* SIGNUP PAGE ROOT */
     .signup-root {
     min-height: 100vh;
     background: #800000;
+    padding: 1rem 1rem;
     }
-    
 
-    .reflogo {
-    padding-top: 1%;
-    margin: 0.2rem auto 0.8rem auto;
+    /* REFLECTIFY LOGO */
+    .reftitle {
     text-align: center;
     font-family: "Tilt Warp", sans-serif;
-    font-weight: 900;
-    font-size: 6vw;
-    color: #FFC632;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: #ffc632;
     letter-spacing: 0.01in;
-    filter: drop-shadow(0 0 0.75rem #702a01);
+    margin-bottom: 1rem;
     }
 
     .SignUp {
     background-color: #ffffff;
-    margin: 0.5rem auto;
-    width: 90%;
-    max-width: 500px;
+    max-width: 520px;
+    margin: 0 auto;
     border-radius: 30px;
-    padding: 1rem 3rem;
-    box-sizing: border-box;
-    filter: drop-shadow(0 0 0.75rem #702a01);
+    padding: 2rem 2.5rem;
+    box-shadow: 0 0 12px #702a01;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
 
     }
 
-    div.SignUp h2 {
+    .SignUp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 0rem;
+    }
+
+    /* HEADINGS */
+    .SignUp h2 {
     color: #800000;
     font-family: "Tilt Warp", sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 0 0 0.4rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     filter: none;
-    letter-spacing: 0in;
-
     }
 
-    div.SignUp h3 {
+    .SignUp h3 {
     color: #A9A297;
     font-family: "Open Sans", sans-serif;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
     filter: none;
+
     }
 
-    div.SignUp h4 {
-    color: #800000;
+    /* LABELS */
+    .SignUp h4 {
     font-family: "Tilt Warp", sans-serif;
-    font-size: 1.05rem;
-    padding-left: 0.1rem;
-    margin-bottom: 0.25rem;
-    margin-top: 0.3rem;
+    color: #800000;
+    font-size: 1rem;
+    margin: 0.8rem 0 0.4rem;
+    font-weight: 300;
     }
 
-    /* Input field appearance */
-    div.SignUp input {
-    background-color: #E9E9E9;
+    /* INPUTS */
+    .SignUp input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.65rem;
+    font-size: 1rem;
     border: none;
     border-radius: 10px;
-    font-size: 1rem;
-    padding: 0.65rem;
-    width: 100%;
+    background-color: #E9E9E9;
+    margin-bottom: 1rem;
     box-sizing: border-box;
-    margin-bottom: 0.7rem;
     }
 
-    /* Placeholder */
-    div.SignUp input::placeholder {
-    color: #888888;
-    font-size: 1rem;
-    opacity: 1;
+    .SignUp input::placeholder {
     font-style: italic;
+    color: #888;
+    font-size: 0.95rem;
     }
 
+    /* NAME FIELD FLEX ROW */
     .name-row {
     display: flex;
-    gap: 0.8rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 0.7rem;
     }
 
     .name-field {
@@ -90,35 +97,31 @@
     min-width: 140px;
     }
 
+    /* RADIO ROLE OPTIONS */
     .role-options {
     display: flex;
-    gap: 1rem;
-    margin: 0.8rem 0;
+    gap: 1.2rem;
     align-items: center;
+    margin-top: 0.5rem;
     }
 
     .role-options label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    color: #800000;
     font-size: 0.95rem;
-    line-height: 1;
-    position: relative;
+    color: #800000;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     }
 
-    /* Custom radio buttons */
+    /* CUSTOM RADIO */
     input[type="radio"] {
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     width: 16px;
     height: 16px;
     border: 2px solid #800000;
     border-radius: 50%;
-    outline: none;
     cursor: pointer;
     position: relative;
     margin: 0;
@@ -127,39 +130,39 @@
     input[type="radio"]:checked::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 8px;
     height: 8px;
-    background-color: #800000;
+    background: #800000;
     border-radius: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     }
 
+    /* BUTTON */
     .createacc-btn {
-    display: block;
-    width: 50%;
-    padding: 0.7rem;
-    background-color: #800000;
+    width: 70%;
+    margin: 1rem auto 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #800000;
     color: white;
     border: none;
     border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 1rem auto 0.5rem auto;
     cursor: pointer;
     }
 
-    .primary-btn:hover {
-    background-color: #a00000;
+    .createacc-btn:hover {
+    background: #a00000;
     }
 
+    /* SIGN IN LINK */
     .alrhanacc {
     text-align: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Tilt Warp", sans-serif;
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 0.4rem;
     }
 
     .signin-link {
@@ -168,29 +171,21 @@
     cursor: pointer;
     }
 
-    /* Responsive */
+    /* RESPONSIVE STYLES */
     @media (min-width: 768px) {
     .reflogo {
+        font-size: 2.5rem;
+    }
+
+    .SignUp h2 {
         font-size: 2rem;
     }
 
-    .SignUp {
-        width: 60%;
+    .SignUp h3 {
+        font-size: 1.05rem;
     }
 
-    div.SignUp h2 {
-        font-size: 2rem;
-    }
-
-    div.SignUp h3 {
-        font-size: 1rem;
-    }
-
-    div.SignUp h4 {
+    .SignUp h4 {
         font-size: 1.2rem;
-    }
-
-    div.reflogo img {
-        width: 30px;
     }
     }
