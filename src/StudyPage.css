@@ -104,10 +104,24 @@ img {
     .study-container {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem 2rem;
     font-family: 'Open Sans', sans-serif;
     background-color: #E9E9E9;
     min-height: 100vh;
+    }
+    
+
+    .settitle-box input {
+    border: none;
+    border-bottom: 3px solid #800000;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 40%;
+    box-sizing: border-box;
+    background-color: #E9E9E9;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #333;
     }
 
     .study-header {
@@ -121,26 +135,18 @@ img {
     color: #800000;
     font-size: 2rem;
     font-family: 'Tilt Warp', sans-serif;
+    filter: none;
     }
 
-    .add-flashcard-btn {
-    background-color: #800000;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    }
-
-    .add-flashcard-btn:hover {
-    background-color: #a00000;
+    .delnarr{
+        height: auto;
     }
 
 
 
-        .card-meta {
+
+
+    .card-meta {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
@@ -152,17 +158,38 @@ img {
     color: #800000;
     }
 
-    .uploaddocu-btn{
+    .uploaddocu-btn {
     background-color: #800000;
-    padding: 0.5rem;
+    padding: 1rem 0.8rem; /* less vertical padding */
     margin-top: 1.5rem;
     border: none;
     border-radius: 0.7rem;
     color: #ffffff;
     font-family: 'Tilt Warp', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem; /* slightly smaller text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem; /* tighter spacing between elements */
     }
 
+    .uplogo img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.4rem;
+    }
+
+
+    .uploaddocu-btn p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.1;
+    }
+
+    
+    
     .termndesc {
     display: flex;
     gap: 2rem;
@@ -238,11 +265,43 @@ img {
     }
 
     /* ==== FLASHCARD FORM ==== */
-    .flashcard-form {
+        .flashcard-form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative; /* for potential absolute positioning */
+    }
+
+    .delandarr {
+    display: flex;
+    justify-content: flex-end; /* 🔥 this moves buttons to the right */
+    gap: 0.5rem;
+    }
+
+    .delete-btn,
+    .arrange-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    .delete-btn:hover,
+    .arrange-btn:hover{
+    background-color: #E9E9E9;
+    
+    }
+
+    .delete-btn img,
+    .arrange-btn img {
+    width: 20px;
+    height: 20px;
     }
 
     .flashcard-form input {
@@ -255,7 +314,6 @@ img {
 
     .flashcard-form button {
     align-self: flex-start;
-    background-color: #800000;
     color: white;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -265,8 +323,46 @@ img {
     transition: background-color 0.2s ease;
     }
 
-    .flashcard-form button:hover {
+
+
+    .addbtn {
+    display: flex;
+    justify-content: flex-end;
+    }
+
+    .add-flashcard-btn {
+    font-family: 'Tilt Warp', sans-serif;
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 15%;
+    }
+
+    .add-flashcard-btn:hover {
     background-color: #a00000;
+    }
+
+    .savebtn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem;
+    }
+    .save-btn{
+    font-family: 'Tilt Warp', sans-serif;
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 15%;
     }
 
     /* ==== FLASHCARDS LIST ==== */

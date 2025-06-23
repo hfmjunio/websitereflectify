@@ -9,6 +9,8 @@
     import UnsldAssignIcon from './assets/unsldassignlogo.png';
     import UnsldNotifIcon from './assets/unsldnotiflogo.png';
     import UnsldLogoutIcon from './assets/unsldlogoutlogo.png';
+    import DeleteLogo from './assets/deletelogo.png';
+    import ArrangeLogo from './assets/arrangelogo.png';
 
     interface Flashcard {
     id: number;
@@ -90,14 +92,15 @@
             <section className="study-container">
             <div className="study-header">
                 <h1>New Study Set</h1>
+            
+            </div>
             <div className="settitle-box">
-                
-            </div>
-            </div>
 
-        <div className='titlearea'>
             <input type="text" placeholder="Title" />
             </div>
+            
+
+        
 
 
             <section className="card-meta">
@@ -130,12 +133,25 @@
                     </section>
 
                     <button className="uploaddocu-btn" onClick={handleAddCard}>
-                Upload Document
+                        <div className='uplogo'><img src={ReflectifyIcon} alt="Reflectify Logo" />
+</div>
+                    Upload Document
                 <p>(Supports .pptx, .pdf, .doc, .docx, and .txt)</p>
                 </button>
 
         <section className='termndesc'>
             <div className="flashcard-form">
+
+                <div className='delandarr'>
+                    <button className="delete-btn">
+                    <img src={DeleteLogo} alt="Delete Logo" />
+                    </button>
+
+                    <button className="arrange-btn">
+                    <img src={ArrangeLogo} alt="Arrange Logo" />
+                    </button>
+                </div>
+                
                 <input
                 type="text"
                 placeholder="Term"
@@ -148,6 +164,13 @@
                 value={definition}
                 onChange={(e) => setDefinition(e.target.value)}
                 />
+
+
+                <div className='addbtn'>
+                <button className="add-flashcard-btn" onClick={handleAddCard}>
+                +
+                </button>
+                </div>
             </div>
         </section>
 
@@ -158,19 +181,14 @@
                     <p>{card.definition}</p>
                 </div>
                 ))}
+
+                
             </div>
-
-            <button className="add-flashcard-btn" onClick={handleAddCard}>
-                + Add Flashcard
-                </button>
-
-                <button className="add-flashcard-btn" onClick={handleAddCard}>
-                + Add Flashcard
-                </button>
-
-                <button className="add-flashcard-btn" onClick={handleAddCard}>
+                <div className='savebtn'>
+                <button className="save-btn" onClick={handleAddCard}>
                 Save
                 </button>
+                </div>
             </section>
         </main>
         </div>
