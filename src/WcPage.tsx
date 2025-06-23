@@ -1,6 +1,6 @@
 import ReflectifyIcon from './assets/reflogo.png'
 import { useNavigate } from 'react-router-dom'
-import './WCPage.css';
+import './WcPage.css';
 
 function WcPage() {
   const navigate = useNavigate()
