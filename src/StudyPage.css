@@ -1,33 +1,4 @@
-/* ==== TOPBAR ==== */
-.topbar {
-    background: #800000;
-    padding: 1rem 1.5rem;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-box {
-    background: white;
-    padding: 0.4rem 1rem;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    color: #555;
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-}
-
-.search-box input {
-    border: none;
-    margin-left: 0.5rem;
-    outline: none;
-    flex: 1;
-}
-
-  /* ==== SIDEBAR ==== */
+/* ==== SIDEBAR ==== */
 .sidebar {
     width: 80px;
     min-width: 60px;
@@ -97,323 +68,393 @@ img {
     color: inherit;
 }
 
+/* ==== MAIN LAYOUT ==== */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
 
-
-    
-    /* ==== STUDY PAGE MAIN ==== */
-    .study-container {
+.main-content.chat-main {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #E9E9E9;
-    min-height: 100vh;
-    }
-    
+    flex: 1;
+    background: #f1f1f1;
+}
 
-    .settitle-box input {
-    border: none;
-    border-bottom: 3px solid #800000;
-    outline: none;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    width: 40%;
-    box-sizing: border-box;
-    background-color: #E9E9E9;
-    font-family: 'Tilt Warp', sans-serif;
-    color: #333;
-    }
-
-    .study-header {
+/* ==== TOPBAR ==== */
+.topbar {
+    background: #800000;
+    padding: 1rem 1.5rem;
+    color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
-    }
+}
 
-    .study-header h1 {
-    color: #800000;
-    font-size: 2rem;
-    font-family: 'Tilt Warp', sans-serif;
-    filter: none;
-    }
-
-    .delnarr{
-        height: auto;
-    }
-
-
-
-
-
-    .card-meta {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
+.search-box {
     background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    font-family: 'Tilt Warp', sans-serif;
-    color: #800000;
-    }
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #555;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
 
-    .uploaddocu-btn {
-    background-color: #800000;
-    padding: 1rem 0.8rem; /* less vertical padding */
-    margin-top: 1.5rem;
+.search-box input {
     border: none;
-    border-radius: 0.7rem;
+    margin-left: 0.5rem;
+    outline: none;
+    flex: 1;
+}
+
+/* ==== CHAT BODY ==== */
+.study-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ==== LEFT PANEL ==== */
+.study-left {
+    width: 30%;
+    background: #E3E3E3;
+    border-right: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.study-left .study-header h2 {
     color: #ffffff;
-    font-family: 'Tilt Warp', sans-serif;
-    font-size: 1.2rem; /* slightly smaller text */
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    filter: none;
+
+}
+
+.study-title {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.25rem; /* tighter spacing between elements */
-    }
-
-    .uplogo img {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 0.4rem;
-    }
-
-
-    .uploaddocu-btn p {
-    margin: 0;
-    padding: 0;
-    font-size: 0.85rem;
-    opacity: 0.8;
-    line-height: 1.1;
-    }
-
-    
-    
-    .termndesc {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    font-family: 'Tilt Warp', sans-serif;
+    gap: 0.5rem;
+    font-size: 1.4rem;
     color: #800000;
-    }
+}
 
-    /* Left panel */
-    .meta-left {
-    flex: 1;
+.study-title img {
+    width: 30px;
+    height: 30px;
+}
+
+.study-header {
+    background-color: #800000;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+    display: flex;               /* Add flex container */
+    justify-content: center;     /* Horizontally center */
+    align-items: center;         /* Vertically center */
+}
+
+.sets-folders-sharedsets {
+    display: flex;                 /* Line up children horizontally */
+    justify-content: center;      /* Center them left-to-right */
+    align-items: center;          /* Center them top-to-bottom */
+    gap: 1rem;                    /* Space between buttons */
+    padding: 1rem;
+    height: 3rem;       /* Optional padding around */
+}
+
+.sets-folders-sharedsets .setsbtn{
+    background-color: #800000;
+    font-size: 1.5rem;
+    border: none;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #ffffff;
+    width: 7rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    
+}
+.sets-folders-sharedsets .foldersbtn{
+    background-color: #E3E3E3;
+    font-size: 1.5rem;
+    border: none;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #9A9A9A;
+    width: 7rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    
+}
+.sets-folders-sharedsets .sharedbtn{
+    background-color: #E3E3E3;
+    font-size: 1.4rem;
+    border: none;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #9A9A9A;
+    width: 10rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    
+}
+
+.sets {
+    padding: 0 0.7rem;
+}
+
+.flashcards {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.flashcards h2 {
+    color: #800000;
+    filter: none;
     display: flex;
-    flex-direction: column;
-    }
+    font-size: 1.5rem;
+}
 
-    .meta-left label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    }
-
-        .meta-left textarea {
-    width: 100%;                    /* Takes full width of parent */
-    min-width: 250px;              /* Optional: prevent too narrow on small screens */
-    height: 165px;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.95rem;
-    background-color: #E9E9E9;
-    color: #333;
-    line-height: 1.5;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    box-sizing: border-box;        /* Ensures padding doesn't reduce width */
-    }
-
-    .meta-left textarea:focus {
-    border-color: #800000;
-    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
-    outline: none;
-    }
-
-
-    /* Right panel */
-    .meta-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    }
-
-    .form-group {
-    display: flex;
-    flex-direction: column;
-    }
-
-    .form-group label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    }
-
-    .form-group select,
-    .form-group input {
-    padding: 0.7rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.95rem;
-    }
-
-    /* ==== FLASHCARD FORM ==== */
-        .flashcard-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-bottom: 1rem;
+.sets .set1, .set2{
+    background-color: #e9e9e9;
+    font-family: 'Tilt Warp', sans-serif;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: none;
     width: 100%;
-    position: relative; /* for potential absolute positioning */
-    }
+}
 
-    .delandarr {
+.editandcreate {
     display: flex;
     justify-content: flex-end; /* 🔥 this moves buttons to the right */
     gap: 0.5rem;
-    }
+    margin: 1rem;
+}
 
-    .delete-btn,
-    .arrange-btn {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 0.4rem 0.6rem;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    }
-    .delete-btn:hover,
-    .arrange-btn:hover{
-    background-color: #E9E9E9;
-    
-    }
-
-    .delete-btn img,
-    .arrange-btn img {
-    width: 20px;
-    height: 20px;
-    }
-
-    .flashcard-form input {
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    font-family: inherit;
-    }
-
-    .flashcard-form button {
-    align-self: flex-start;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    }
-
-
-
-    .addbtn {
-    display: flex;
-    justify-content: flex-end;
-    }
-
-    .add-flashcard-btn {
-    font-family: 'Tilt Warp', sans-serif;
+.editbtn , .createbtn {
     background-color: #800000;
-    color: white;
+    color: #FFC632;
     border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    width: 15%;
-    }
-
-    .add-flashcard-btn:hover {
-    background-color: #a00000;
-    }
-
-    .savebtn {
-    display: flex;
-    justify-content: flex-end;
-    margin: 1rem 1rem;
-    }
-    .save-btn{
     font-family: 'Tilt Warp', sans-serif;
-    background-color: #800000;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    width: 15%;
-    }
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+}
 
-    /* ==== FLASHCARDS LIST ==== */
-    .flashcards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    }
 
-    .flashcard {
-    background-color: #ffffff;
+
+
+
+
+
+
+
+/* ==== RIGHT PANEL ==== */
+.chat-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-    }
+    background: #D9D9D9;
+}
 
-    .flashcard:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #800000;
+    padding: 1rem;
+    border-radius: 5rem;
+}
 
-    .flashcard h3 {
-    font-size: 1.1rem;
-    color: #800000;
-    margin-bottom: 0.5rem;
-    }
+.chat-header h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    filter: none;
+}
 
-    .flashcard p {
+.status {
+    font-size: 0.8rem;
+    color: green;
+}
+
+/* ==== CONVERSATION ==== */
+.chat-conversation {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.chat-message {
+    max-width: 70%;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
     font-size: 0.95rem;
-    color: #333;
-    margin: 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.chat-message.from {
+    background: #9A9A9A;
+    align-self: flex-start;
+    color: #ffffff;
+}
+
+.chat-message.to {
+    background: #800000;
+    color: white;
+    align-self: flex-end;
+}
+
+/* ==== INPUT ==== */
+.chat-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-family: "Open Sans", sans-serif;
+    outline: none;
+}
+
+.chat-input button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* ==== RESPONSIVE STYLES ==== */
+@media (max-width: 1024px) {
+    .chat-left {
+        width: 40%;
     }
 
-    /* ==== RESPONSIVE ==== */
-    @media (max-width: 600px) {
-    .study-header {
+    .chat-header h2,
+    .chat-title {
+        font-size: 1.2rem;
+    }
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar li span {
+        font-size: 0.65rem;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
         flex-direction: column;
-        gap: 1rem;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+        padding: 0.5rem;
+        justify-content: space-around;
+    }
+
+    .sidebar .logo {
+        display: none;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar li {
+        padding: 0 0.4rem;
+    }
+
+    .main-content.chat-main {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .chat-body {
+        flex-direction: column;
+    }
+
+    .chat-left,
+    .chat-right {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .chat-header {
+        flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem;
     }
 
-    .flashcard-form input {
-        font-size: 0.95rem;
+    .chat-input {
+        flex-direction: column;
     }
 
-    .flashcard h3 {
+    .chat-input input,
+    .chat-input button {
+        width: 100%;
+    }
+
+    .chat-message {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-title {
         font-size: 1rem;
     }
 
-    .flashcard p {
+    .chat-left input {
         font-size: 0.9rem;
     }
+
+    .chat-person {
+        font-size: 0.9rem;
     }
+
+    .chat-message {
+        font-size: 0.85rem;
+    }
+
+    .chat-input input,
+    .chat-input button {
+        font-size: 0.85rem;
+    }
+
+    .chat-input {
+        position: sticky;
+        bottom: 0;
+        background: #D9D9D9;
+        padding-bottom: 1rem;
+    }
+}

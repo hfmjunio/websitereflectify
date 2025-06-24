@@ -1,196 +1,138 @@
-    import { useState } from 'react';
-    import { Link } from 'react-router-dom';
-    import './StudyPage.css';
-    import ReflectifyIcon from './assets/reflogo.png';
-    import SldDashboardIcon from './assets/slddashlogo.png';
-    import UnsldChatIcon from './assets/unsldchatlogo.png';
-    import UnsldStudyIcon from './assets/unsldstudylogo.png';
-    import UnsldCoursesIcon from './assets/unsldcourseslogo.png';
-    import UnsldAssignIcon from './assets/unsldassignlogo.png';
-    import UnsldNotifIcon from './assets/unsldnotiflogo.png';
-    import UnsldLogoutIcon from './assets/unsldlogoutlogo.png';
-    import DeleteLogo from './assets/deletelogo.png';
-    import ArrangeLogo from './assets/arrangelogo.png';
+import { Link } from 'react-router-dom';
+import './StudyPage.css';
+import ReflectifyIcon from './assets/reflogo.png';
+import DashboardIcon from './assets/unslddashlogo.png';
+import ChatIcon from './assets/unsldchatlogo.png';
+import StudyIcon from './assets/sldstudylogo.png';
+import UnsldStudyIcon from './assets/unsldstudylogo.png';
+import CoursesIcon from './assets/unsldcourseslogo.png';
+import AssignIcon from './assets/unsldassignlogo.png';
+import NotifIcon from './assets/unsldnotiflogo.png';
+import LogoutIcon from './assets/unsldlogoutlogo.png';
 
-    interface Flashcard {
-    id: number;
-    term: string;
-    definition: string;
-    }
-
-    export default function StudyPage() {
-    const [term, setTerm] = useState('');
-    const [definition, setDefinition] = useState('');
-    const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
-
-    const handleAddCard = () => {
-        if (term.trim() && definition.trim()) {
-        const newCard: Flashcard = {
-            id: Date.now(),
-            term,
-            definition,
-        };
-        setFlashcards([...flashcards, newCard]);
-        setTerm('');
-        setDefinition('');
-        }
-    };
-
+export default function StudyPage() {
     return (
         <div className="dashboard-container">
-        {/* Sidebar */}
-        <aside className="sidebar">
-            <div className="logo">
-            <img src={ReflectifyIcon} alt="Reflectify Logo" />
-            </div>
-            <nav>
-            <ul>
-                <li>
-                <img src={SldDashboardIcon} alt="Dashboard Icon" />
-                <span>Dashboard</span>
-                </li>
-                <li>
-                <Link to="/chats" className="nav-link">
-                    <img src={UnsldChatIcon} alt="Chat Icon" />
-                    <span>Chat</span>
-                </Link>
-                </li>
-                <li>
-                <Link to="/study" className="nav-link">
-                    <img src={UnsldStudyIcon} alt="Study Icon" />
-                    <span>Study</span>
-                </Link>
-                </li>
-                <li>
-                <img src={UnsldCoursesIcon} alt="Courses Icon" />
-                <span>Courses</span>
-                </li>
-                <li>
-                <img src={UnsldAssignIcon} alt="Assignments Icon" />
-                <span>Assignments</span>
-                </li>
-                <li>
-                <img src={UnsldNotifIcon} alt="Notifications Icon" />
-                <span>Notifications</span>
-                </li>
-                <li className="logout">
-                <img src={UnsldLogoutIcon} alt="Logout Icon" />
-                <span>Log Out</span>
-                </li>
-            </ul>
-            </nav>
-        </aside>
+            {/* Sidebar */}
+            <aside className="sidebar">
+                <div className="logo">
+                    <img src={ReflectifyIcon} alt="Reflectify Logo" />
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/studentdashboard" className="nav-link">
+                                <img src={DashboardIcon} alt="Dashboard" />
+                                <span>Dashboard</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/chats" className="nav-link">
+                                <img src={ChatIcon} alt="Chat" />
+                                <span>Chat</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/createset" className="nav-link">
+                                <img src={StudyIcon} alt="Study" />
+                                <span>Study</span>
+                                </Link>
+                        </li>
+                        <li>
+                            <div className="nav-link">
+                                <img src={CoursesIcon} alt="Courses" />
+                                <span>Courses</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="nav-link">
+                                <img src={AssignIcon} alt="Assignments" />
+                                <span>Assignments</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="nav-link">
+                                <img src={NotifIcon} alt="Notifications" />
+                                <span>Notifications</span>
+                            </div>
+                        </li>
+                        <li className="logout">
+                            <div className="nav-link">
+                                <img src={LogoutIcon} alt="Logout" />
+                                <span>Log Out</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
 
-        {/* Main Content */}
-        <main className="main-content">
-            <header className="topbar">
-            <div className="search-box">
-                <input type="text" placeholder="Search" />
-            </div>
-            </header>
-
-            <section className="study-container">
-            <div className="study-header">
-                <h1>New Study Set</h1>
-            
-            </div>
-            <div className="settitle-box">
-
-            <input type="text" placeholder="Title" />
-            </div>
-            
-
-        
-
-
-            <section className="card-meta">
-                    {/* Left: Description */}
-                    <div className="meta-left">
-                        <textarea id="description" placeholder="Add a description for your study set..." />
+            {/* Chat Layout */}
+            <main className="main-content study-main">
+                <header className="topbar">
+                    <div className="search-box">
+                        <input type="text" placeholder="Search" />
                     </div>
+                </header>
 
-                    {/* Right: Folder + Share */}
-                    <div className="meta-right">
-                        <div className="form-group">
-                        <label htmlFor="folder">Select Folder:</label>
-                        <select id="folder">
-                            <option value="">None</option>
-                            <option value="math">Math</option>
-                            <option value="science">Science</option>
-                            <option value="custom">Custom Folder</option>
-                        </select>
+                {/* Full Chat Split Layout */}
+                <div className="study-body">
+                    {/* Left Panel */}
+                    <section className="study-left">
+                        <div className="study-header">
+                            <h2 className="study-title">
+                                <img src={UnsldStudyIcon} alt="Study Icon" />
+                                Study
+                            </h2>
+                        </div>
+                        <div className="sets-folders-sharedsets">
+                            <button className='setsbtn'>Sets</button>
+                            <button className='foldersbtn'>Folders</button>
+                            <button className='sharedbtn'>Shared Sets</button>
                         </div>
 
-                        <div className="form-group">
-                        <label htmlFor="share">Share With:</label>
-                        <input
-                            id="share"
-                            type="text"
-                            placeholder="Enter email or username"
-                        />
+                        <div className='flashcards'>
+                            <h2>Flashcards</h2>
+                        
+                        <div className='sets'>
+                            <button className='set1'>
+                                Introduction to Digital Image
+                            </button>
+
+                            <button className='set1'>
+                                BRUH XD
+                            </button>
                         </div>
-                    </div>
+                        </div>
+
+
+                        <div className='editandcreate'>
+                    <button className="editbtn">
+                    Edit
+                    </button>
+
+                    <button className="createbtn">
+                    +
+                    </button>
+                </div>
                     </section>
 
-                    <button className="uploaddocu-btn" onClick={handleAddCard}>
-                        <div className='uplogo'><img src={ReflectifyIcon} alt="Reflectify Logo" />
-</div>
-                    Upload Document
-                <p>(Supports .pptx, .pdf, .doc, .docx, and .txt)</p>
-                </button>
-
-        <section className='termndesc'>
-            <div className="flashcard-form">
-
-                <div className='delandarr'>
-                    <button className="delete-btn">
-                    <img src={DeleteLogo} alt="Delete Logo" />
-                    </button>
-
-                    <button className="arrange-btn">
-                    <img src={ArrangeLogo} alt="Arrange Logo" />
-                    </button>
+                    {/* Right Panel */}
+                    <section className="chat-right">
+                        <div className="chat-header">
+                            <h2>Prof. Reyes</h2>
+                            <span className="status">Online</span>
+                        </div>
+                        <div className="chat-conversation">
+                            <div className="chat-message from">Don’t forget your deadline today!</div>
+                            <div className="chat-message to">Noted po. Thank you!</div>
+                        </div>
+                        <div className="chat-input">
+                            <input type="text" placeholder="Type a message..." />
+                            <button>Send</button>
+                        </div>
+                    </section>
                 </div>
-                
-                <input
-                type="text"
-                placeholder="Term"
-                value={term}
-                onChange={(e) => setTerm(e.target.value)}
-                />
-                <input
-                type="text"
-                placeholder="Definition"
-                value={definition}
-                onChange={(e) => setDefinition(e.target.value)}
-                />
-
-
-                <div className='addbtn'>
-                <button className="add-flashcard-btn" onClick={handleAddCard}>
-                +
-                </button>
-                </div>
-            </div>
-        </section>
-
-            <div className="flashcards-grid">
-                {flashcards.map((card) => (
-                <div key={card.id} className="flashcard">
-                    <h3>{card.term}</h3>
-                    <p>{card.definition}</p>
-                </div>
-                ))}
-
-                
-            </div>
-                <div className='savebtn'>
-                <button className="save-btn" onClick={handleAddCard}>
-                Save
-                </button>
-                </div>
-            </section>
-        </main>
+            </main>
         </div>
     );
-    }
+}

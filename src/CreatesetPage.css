@@ -1,0 +1,419 @@
+/* ==== TOPBAR ==== */
+.topbar {
+    background: #800000;
+    padding: 1rem 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    background: white;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #555;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+
+.search-box input {
+    border: none;
+    margin-left: 0.5rem;
+    outline: none;
+    flex: 1;
+}
+
+  /* ==== SIDEBAR ==== */
+.sidebar {
+    width: 80px;
+    min-width: 60px;
+    background-color: #800000;
+    color: #f1f1f1;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar .logo {
+    width: 45px;
+    margin-bottom: 2rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar li:hover img {
+    transform: translateY(-3px);
+}
+
+.sidebar li img {
+    width: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.sidebar li span {
+    font-size: 0.8rem;
+    font-family: "Tilt Warp", sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.sidebar li .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+    
+    /* ==== STUDY PAGE MAIN ==== */
+    .study-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #E9E9E9;
+    min-height: 100vh;
+    }
+    
+
+    .settitle-box input {
+    border: none;
+    border-bottom: 3px solid #800000;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 40%;
+    box-sizing: border-box;
+    background-color: #E9E9E9;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #333;
+    }
+
+    .study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    }
+
+    .study-header h1 {
+    color: #800000;
+    font-size: 2rem;
+    font-family: 'Tilt Warp', sans-serif;
+    filter: none;
+    }
+
+    .delnarr{
+        height: auto;
+    }
+
+
+
+
+
+    .card-meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Tilt Warp', sans-serif;
+    color: #800000;
+    }
+
+    .uploaddocu-btn {
+    background-color: #800000;
+    padding: 1rem 0.8rem; /* less vertical padding */
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 0.7rem;
+    color: #ffffff;
+    font-family: 'Tilt Warp', sans-serif;
+    font-size: 1.2rem; /* slightly smaller text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem; /* tighter spacing between elements */
+    }
+
+    .uplogo img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.4rem;
+    }
+
+
+    .uploaddocu-btn p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    line-height: 1.1;
+    }
+
+    
+    
+    .termndesc {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Tilt Warp', sans-serif;
+    color: #800000;
+    }
+
+    /* Left panel */
+    .meta-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .meta-left label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    }
+
+        .meta-left textarea {
+    width: 100%;                    /* Takes full width of parent */
+    min-width: 250px;              /* Optional: prevent too narrow on small screens */
+    height: 165px;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    background-color: #E9E9E9;
+    color: #333;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;        /* Ensures padding doesn't reduce width */
+    }
+
+    .meta-left textarea:focus {
+    border-color: #800000;
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+    outline: none;
+    }
+
+
+    /* Right panel */
+    .meta-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    }
+
+    .form-group {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    }
+
+    .form-group select,
+    .form-group input {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    }
+
+    /* ==== FLASHCARD FORM ==== */
+        .flashcard-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative; /* for potential absolute positioning */
+    }
+
+    .delandarr {
+    display: flex;
+    justify-content: flex-end; /* 🔥 this moves buttons to the right */
+    gap: 0.5rem;
+    }
+
+    .delete-btn,
+    .arrange-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    .delete-btn:hover,
+    .arrange-btn:hover{
+    background-color: #E9E9E9;
+    
+    }
+
+    .delete-btn img,
+    .arrange-btn img {
+    width: 20px;
+    height: 20px;
+    }
+
+    .flashcard-form input {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: inherit;
+    }
+
+    .flashcard-form button {
+    align-self: flex-start;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    }
+
+
+
+    .addbtn {
+    display: flex;
+    justify-content: flex-end;
+    }
+
+    .add-flashcard-btn {
+    font-family: 'Tilt Warp', sans-serif;
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 15%;
+    }
+
+    .add-flashcard-btn:hover {
+    background-color: #a00000;
+    }
+
+    .savebtn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem;
+    }
+    .save-btn{
+    font-family: 'Tilt Warp', sans-serif;
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 15%;
+    }
+
+    /* ==== FLASHCARDS LIST ==== */
+    .flashcards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    }
+
+    .flashcard {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    }
+
+    .flashcard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .flashcard h3 {
+    font-size: 1.1rem;
+    color: #800000;
+    margin-bottom: 0.5rem;
+    }
+
+    .flashcard p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+    }
+
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 600px) {
+    .study-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .flashcard-form input {
+        font-size: 0.95rem;
+    }
+
+    .flashcard h3 {
+        font-size: 1rem;
+    }
+
+    .flashcard p {
+        font-size: 0.9rem;
+    }
+    }

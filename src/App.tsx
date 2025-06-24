@@ -4,7 +4,9 @@ import WcPage from "./WcPage";
 import LoginPage from "./LoginPage";
 import StudDBPage from "./StudDBPage";
 import ChatsPage from "./ChatPage";
+import CreatesetPage from "./CreatesetPage";
 import StudyPage from "./StudyPage";
+
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <Route path="/studentdashboard" element={<StudDBPage />} />
       <Route path="/chats" element={<ChatsPage />} />
       <Route path="/study" element={<StudyPage />} />
+      <Route path="/createset" element={<CreatesetPage />} />
 
     </Routes>
     </>

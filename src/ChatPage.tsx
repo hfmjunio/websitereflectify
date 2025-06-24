@@ -33,10 +33,10 @@ export default function ChatPage() {
                             </Link>
                         </li>
                         <li>
-                            <div className="nav-link">
+                            <Link to="/study" className="nav-link">
                                 <img src={StudyIcon} alt="Study" />
                                 <span>Study</span>
-                            </div>
+                                </Link>
                         </li>
                         <li>
                             <div className="nav-link">
