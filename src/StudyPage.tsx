@@ -33,7 +33,7 @@ export default function StudyPage() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/createset" className="nav-link">
+                            <Link to="/study" className="nav-link">
                                 <img src={StudyIcon} alt="Study" />
                                 <span>Study</span>
                                 </Link>
@@ -110,9 +110,11 @@ export default function StudyPage() {
                     Edit
                     </button>
 
+                    <Link to="/createset" className="nav-link">
                     <button className="createbtn">
                     +
                     </button>
+                    </Link>
                 </div>
                     </section>
 
