@@ -6,7 +6,7 @@ import StudDBPage from "./StudDBPage";
 import ChatsPage from "./ChatPage";
 import CreatesetPage from "./CreatesetPage";
 import StudyPage from "./StudyPage";
-
+import CoursesPage from "./CoursesPage";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <Route path="/chats" element={<ChatsPage />} />
       <Route path="/study" element={<StudyPage />} />
       <Route path="/createset" element={<CreatesetPage />} />
-
+      <Route path="/courses" element={<CoursesPage />} />
     </Routes>
     </>
     

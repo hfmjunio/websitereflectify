@@ -4,47 +4,46 @@ body {
     font-size: 16px;
 }
 
-.dashboard-container {
+.studashboard-container {
     display: flex;
     height: 100vh;
     overflow: hidden;
 }
 
-.sidebar {
-    width: 80px;
-    min-width: 60px;
+.studbsidebar {
+    width: 3rem;
     background-color: #800000;
     color: #f1f1f1;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: width 0.3s ease; /* For potential future expand/collapse */
 }
 
-.sidebar.collapsed { /* Example for a collapsed state if you implement it */
+.studbsidebar.collapsed {
     width: 60px;
 }
 
-.sidebar .logo {
-    width: 45px;
+.studbsidebar .logo {
+    width: 2.7rem;
     margin-bottom: 2rem;
 }
 
-img {
+.studbsidebar img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.sidebar ul {
+.studbsidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-.sidebar li {
+.studbsidebar li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,8 +53,7 @@ img {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-.sidebar li img {
+.studbsidebar li img {
     width: 2rem;
     height: auto;
     margin-bottom: 0.3rem;
@@ -63,26 +61,44 @@ img {
     padding: 0;
 }
 
-.sidebar li:hover img {
+.studbsidebar li:hover img {
     transform: translateY(-3px);
 }
 
-
-.sidebar li span {
+.studbsidebar li span {
     font-size: 0.8rem;
     font-family: "Tilt Warp", sans-serif;
     font-weight: lighter;
     color: #ffffff;
-    white-space: nowrap;
 }
 
-.main-content {
+.studbmain-content {
     flex: 1;
     background: #f1f1f1;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
 }
+
+
+.studbsidebar li span {
+    font-size: 0.6rem;
+    font-family: "Tilt Warp", sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.studbsidebar li .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
 
 .topbar {
     background: #800000;
@@ -116,7 +132,7 @@ img {
     padding: 0.2rem 0;
 }
 
-.content {
+.studdbcontent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -131,9 +147,17 @@ img {
     display: flex;
     flex-direction: column;
     font-family: 'Tilt Warp', sans-serif;
-    
 }
 
+.carddashcourses {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tilt Warp', sans-serif;
+}
 
 .card-header {
     display: flex;
@@ -163,8 +187,6 @@ img {
     filter: none;
 }
 
-
-
 .course-list {
     display: flex;
     gap: 1rem;
@@ -191,6 +213,7 @@ img {
     transition: transform 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
 }
+
 .course-box {
     background: #e0e0e0;
     padding: 1rem;
@@ -208,7 +231,6 @@ img {
     text-align: center;
     border-bottom: 2px solid #800000;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    
 }
 
 .course-box:hover {
@@ -222,172 +244,130 @@ img {
     color: #ffffff;
 }
 
-
-
-    /* ===== Medium Desktops & Tablets ===== */
-    @media (max-width: 1200px) {
-    .content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .search-box {
-        width: 25rem;
-    }
-    }
-
-    /* ===== Tablets & Small Laptops ===== */
-    @media (max-width: 992px) {
-    .sidebar {
-        width: 60px;
-        min-width: unset;
-        padding: 0.8rem 0.3rem;
-    }
-
-    .sidebar li img {
-        width: 2rem;
-    }
-
-    .sidebar li span {
-        font-size: 0.7rem;
-    }
-
-    .topbar {
-        padding: 0.8rem 1rem;
-    }
-
-    .search-box {
-        width: 20rem;
-        max-width: 300px;
-        padding: 0.3rem 0.8rem;
-    }
-
-    .content {
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .card {
-        padding: 1.2rem;
-    }
-
-    .card-header h2 {
-        font-size: 1rem;
-    }
-
-    .course-list {
-        gap: 0.8rem;
-    }
-
-    .course-box {
-        padding: 0.8rem;
-        flex: 1 1 calc(50% - 0.4rem);
-    }
-
-    .card-schedule h2 {
-        font-size: 1rem;
-    }
-    }
-
-    /* ===== Landscape Phones & Small Tablets ===== */
-    @media (max-width: 768px) {
-    .dashboard-container {
+@media (max-width: 768px) {
+    .studashboard-container {
         flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
         height: auto;
-        padding: 0.5rem 1rem;
-        justify-content: space-around;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .sidebar .logo {
-        display: none;
+    .studbsidebar {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto; /* ADD THIS */
+    white-space: nowrap; /* PREVENT WRAPPING */
     }
 
-    .sidebar ul {
-        display: flex;
-        width: auto;
-        flex-grow: 1;
-        justify-content: space-around;
+    .studbsidebar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: max-content; /* KEY TO AVOID TRUNCATION */
+    padding: 0;
+    gap: 1rem;
+}
+
+    .studbsidebar li {
+        padding: 0.5rem;
+        flex-direction: column; /* Keep this for individual item layout */
+        align-items: center; /* Center items within the list */
+        flex-shrink: 0;
+
     }
 
-    .sidebar li {
-        margin-bottom: 0;
-        padding: 0.5rem 0.2rem;
-        flex-basis: auto;
+    .studbsidebar li span {
+        font-size: 0.7rem; /* Adjust font size for smaller screens */
     }
 
-    .sidebar li img {
-        width: 1.8rem;
-        margin-bottom: 0.1rem;
-    }
-
-    .sidebar li span {
-        font-size: 0.65rem;
+    .studbsidebar .logo {
+        display: none; /* Hide logo if necessary */
     }
 
     .main-content {
-        height: calc(100vh - 70px);
-        overflow-y: auto;
+        height: auto;
     }
 
-    .topbar {
+    .study-body {
+        flex-direction: column;
+    }
+
+    .study-left,
+    .study-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .sets-folders-sharedsets {
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 0.8rem 1rem;
+        gap: 0.5rem;
+        padding: 0.5rem;
     }
 
-    .search-box {
-        width: 90%;
-        margin-top: 0.5rem;
-        max-width: none;
+    .setsbtn,
+    .foldersbtn,
+    .sharedbtn {
+        width: 100%;
+        font-size: 1.2rem;
     }
 
-    .content {
-        grid-template-columns: 1fr;
-        padding: 0.8rem;
-        gap: 0.8rem;
-    }
-
-    .card {
+    .fcnocontent {
+        flex-direction: column;
+        height: auto;
         padding: 1rem;
     }
 
-    .course-box {
-        flex: 1 1 100%;
-    }
-    }
-
-    /* ===== Small Phones ===== */
-    @media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .sidebar li img {
-        width: 1.6rem;
-    }
-
-    .sidebar li span {
-        font-size: 0.6rem;
-    }
-
-    .topbar {
-        padding: 0.6rem 0.8rem;
-    }
-
     .search-box {
-        padding: 0.3rem 0.6rem;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .content {
-        padding: 0.6rem;
+    .editandcreate {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+
+    .studdbcontent {
+        grid-template-columns: repeat(1, 1fr); /* Adjust for smaller screens */
     }
 
     .card {
-        padding: 0.8rem;
+        padding: 1rem; /* Reduce padding for smaller screens */
     }
+
+    .assign-box,
+    .course-box,
+    .sched-box {
+        flex: 1 1 calc(100% - 0.5rem); /* Full width on smaller screens */
     }
+}
+
+@media (max-width: 480px) {
+    .studbsidebar {
+        flex-direction: row; /* Ensure items are in a row */
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .studbsidebar li {
+        padding: 0.5rem 0; /* More padding for touch targets */
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem; /* Increase padding for better usability */
+    }
+
+    .studbcard-header h2 {
+        font-size: 1.2rem; /* Smaller font size for headers */
+    }
+
+    .card-header span,
+    .card-header p {
+        font-size: 0.8rem; /* Smaller font size for text */
+    }
+}

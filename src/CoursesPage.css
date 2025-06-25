@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.courses-container {
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+}
+
+.sidebar {
+    width: 80px;
+    min-width: 60px;
+    background-color: #800000;
+    color: #f1f1f1;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease; /* For potential future expand/collapse */
+}
+
+.sidebar.collapsed { /* Example for a collapsed state if you implement it */
+    width: 60px;
+}
+
+.sidebar .logo {
+    width: 45px;
+    margin-bottom: 2rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.sidebar li img {
+    width: 2rem;
+    height: auto;
+    margin-bottom: 0.3rem;
+    transition: transform 0.3s ease;
+    padding: 0;
+}
+
+.sidebar li:hover img {
+    transform: translateY(-3px);
+}
+
+
+.sidebar li span {
+    font-size: 0.8rem;
+    font-family: "Tilt Warp", sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.courses-content {
+    flex: 1;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.topbar {
+    background: #800000;
+    padding: 1rem 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.search-box {
+    background: white;
+    padding: 0.4rem 0rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #555;
+    width: 30rem;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    font-family: "Open Sans", sans-serif;
+}
+
+.search-box input {
+    border: none;
+    margin-left: 0.5rem;
+    outline: none;
+    flex: 1;
+    padding: 0.2rem 0;
+}
+
+.coursecontent {
+    margin: 2rem;
+    width: 100%;
+}
+
+.card-courses{
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-family: 'Tilt Warp', sans-serif;
+    width: auto;
+    margin: 2rem;
+    
+}
+
+
+.cardcourse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.cardcourse-header h2 {
+    font-weight: bold;
+    color: #800000;
+    font-size: 1.5rem;
+    filter: none;
+}
+
+
+.card-header p {
+    font-weight: normal;
+    color: #000000;
+    font-size: 0.8rem;
+    filter: none;
+}
+
+
+
+.courselists {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-family: 'Tilt Warp', sans-serif;
+    overflow-x: auto;
+}
+
+.course-boxs {
+    background: #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    flex: 0 0 auto;
+
+}
+
+
+
+.course-box:hover {
+    transform: translateY(-3px);
+    background-color: #d0d0d0;
+}
+
+.card-courses hr {
+    background-color: #800000;
+    height: 2px;
+    border: none;
+}
+
+
+
+

@@ -18,7 +18,7 @@
 
 
     return (
-        <div className="dashboard-container">
+        <div className="stupage-container">
         {/* Sidebar */}
         <aside className="sidebar">
             <div className="logo">
@@ -45,10 +45,10 @@
                 </Link>
                 </li>
                 <li>
-                <div className="nav-link">
+                <Link to="/courses" className="nav-link">
                     <img src={CoursesIcon} alt="Courses" />
                     <span>Courses</span>
-                </div>
+                </Link>
                 </li>
                 <li>
                 <div className="nav-link">
