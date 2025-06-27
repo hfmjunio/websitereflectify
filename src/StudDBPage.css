@@ -1,15 +1,11 @@
-body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-}
-
+/* ==== Layout ==== */
 .studashboard-container {
     display: flex;
     height: 100vh;
     overflow: hidden;
 }
 
+/* ==== Sidebar ==== */
 .studbsidebar {
     width: 3rem;
     background-color: #800000;
@@ -18,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: width 0.3s ease; /* For potential future expand/collapse */
+    transition: width 0.3s ease;
 }
 
 .studbsidebar.collapsed {
@@ -72,20 +68,8 @@ body {
     color: #ffffff;
 }
 
-.studbmain-content {
-    flex: 1;
-    background: #f1f1f1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-
-
 .studbsidebar li span {
     font-size: 0.6rem;
-    font-family: "Tilt Warp", sans-serif;
-    font-weight: lighter;
-    color: #ffffff;
     white-space: nowrap;
 }
 
@@ -97,10 +81,17 @@ body {
     color: inherit;
 }
 
+/* ==== Main ==== */
+.studbmain-content {
+    flex: 1;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
 
-
-
-.topbar {
+/* ==== Topbar ==== */
+.studtopbar {
     background: #800000;
     padding: 1rem 1.5rem;
     color: white;
@@ -108,10 +99,13 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
     z-index: 10;
 }
 
-.search-box {
+/* ==== Search ==== */
+.studsearch-box {
     background: white;
     padding: 0.4rem 0rem;
     border-radius: 10px;
@@ -124,7 +118,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-.search-box input {
+.studsearch-box input {
     border: none;
     margin-left: 0.5rem;
     outline: none;
@@ -132,6 +126,7 @@ body {
     padding: 0.2rem 0;
 }
 
+/* ==== Content ==== */
 .studdbcontent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -139,6 +134,7 @@ body {
     padding: 1.5rem;
 }
 
+/* ==== Card ==== */
 .card {
     background: white;
     padding: 1.5rem;
@@ -159,6 +155,7 @@ body {
     font-family: 'Tilt Warp', sans-serif;
 }
 
+/* ==== Header ==== */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -187,6 +184,7 @@ body {
     filter: none;
 }
 
+/* ==== Lists ==== */
 .course-list {
     display: flex;
     gap: 1rem;
@@ -204,7 +202,8 @@ body {
     font-family: 'Tilt Warp', sans-serif;
 }
 
-.assign-box {
+/* ==== Boxes ==== */
+.studassign-box {
     padding: 1rem;
     flex: 1 1 calc(50% - 0.5rem);
     text-align: center;
@@ -233,141 +232,107 @@ body {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+/* ==== Hover ==== */
 .course-box:hover {
     transform: translateY(-3px);
     background-color: #d0d0d0;
 }
 
-.assign-box:hover {
+.studassign-box:hover {
     transform: translateY(-3px);
     background-color: #800000;
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .studashboard-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .studbsidebar {
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    padding: 0.5rem;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-x: auto; /* ADD THIS */
-    white-space: nowrap; /* PREVENT WRAPPING */
-    }
-
-    .studbsidebar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: max-content; /* KEY TO AVOID TRUNCATION */
-    padding: 0;
-    gap: 1rem;
-}
-
-    .studbsidebar li {
-        padding: 0.5rem;
-        flex-direction: column; /* Keep this for individual item layout */
-        align-items: center; /* Center items within the list */
-        flex-shrink: 0;
-
-    }
-
-    .studbsidebar li span {
-        font-size: 0.7rem; /* Adjust font size for smaller screens */
-    }
-
-    .studbsidebar .logo {
-        display: none; /* Hide logo if necessary */
-    }
-
-    .main-content {
-        height: auto;
-    }
-
-    .study-body {
-        flex-direction: column;
-    }
-
-    .study-left,
-    .study-right {
-        width: 100%;
-        height: auto;
-    }
-
-    .sets-folders-sharedsets {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    .setsbtn,
-    .foldersbtn,
-    .sharedbtn {
-        width: 100%;
-        font-size: 1.2rem;
-    }
-
-    .fcnocontent {
-        flex-direction: column;
-        height: auto;
+/* ==== Responsive ==== */
+@media (max-width: 1024px) {
+    .studdbcontent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
         padding: 1rem;
     }
 
-    .search-box {
-        width: 100%;
-        max-width: 100%;
+    .studsearch-box {
+        width: 30rem;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .studashboard-container {
+        flex-direction: column;
     }
 
-    .editandcreate {
+    .studbsidebar {
+        flex-direction: row;
+        width: 100%;
+        height: 3.5rem;
+        justify-content: space-around;
+        padding: 0.5rem 0;
+    }
+
+    .studbsidebar .logo {
+        margin-bottom: 0;
+        width: 2rem;
+    }
+
+    .studbsidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .studbsidebar li {
         flex-direction: column;
-        align-items: flex-end;
+        padding: 0.2rem;
+    }
+
+    .studbsidebar li span {
+        font-size: 0.6rem;
+    }
+
+    .studbmain-content {
+        height: auto;
+    }
+
+    .studtopbar {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 0.5rem;
     }
 
-    .studdbcontent {
-        grid-template-columns: repeat(1, 1fr); /* Adjust for smaller screens */
+    .studsearch-box {
+        width: 100%;
     }
 
-    .card {
-        padding: 1rem; /* Reduce padding for smaller screens */
+    .studdbcontent {
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     .assign-box,
     .course-box,
     .sched-box {
-        flex: 1 1 calc(100% - 0.5rem); /* Full width on smaller screens */
+        flex: 1 1 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .studbsidebar {
-        flex-direction: row; /* Ensure items are in a row */
-        width: 100%;
-        padding: 0.5rem;
-    }
-
-    .studbsidebar li {
-        padding: 0.5rem 0; /* More padding for touch targets */
-    }
-
-    .search-box {
-        width: 100%;
-        max-width: 100%;
-        padding: 0.5rem; /* Increase padding for better usability */
-    }
-
-    .studbcard-header h2 {
-        font-size: 1.2rem; /* Smaller font size for headers */
+    .card-header h2 {
+        font-size: 1.2rem;
     }
 
     .card-header span,
     .card-header p {
-        font-size: 0.8rem; /* Smaller font size for text */
+        font-size: 0.7rem;
+    }
+
+    .studsearch-box input {
+        font-size: 0.9rem;
+    }
+
+    .studbsidebar li span {
+        display: none;
     }
 }

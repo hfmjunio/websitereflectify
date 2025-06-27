@@ -14,7 +14,7 @@ export default function CoursesPage() {
     return (
         <div className="courses-container">
             {/* Sidebar */}
-            <aside className="sidebar">
+            <aside className="courses-sidebar">
                 <div className="logo">
                     <img src={ReflectifyIcon} alt="Reflectify Logo" />
                 </div>
@@ -61,14 +61,14 @@ export default function CoursesPage() {
             </aside>
 
             {/* Main content */}
-            <main className="courses-content">
-                <header className="topbar">
-                    <div className="search-box">
+            <main className="courses-main">
+                <header className="courses-topbar">
+                    <div className="courses-search-box">
                         <input type="text" placeholder="Search" />
                     </div>
                 </header>
 
-                <section className="coursescontent">
+                <section className="courses-scontent">
                     
 
                     {/* Courses Card */}

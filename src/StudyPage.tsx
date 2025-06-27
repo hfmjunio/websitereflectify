@@ -18,9 +18,9 @@
 
 
     return (
-        <div className="stupage-container">
+        <div className="studypage-container">
         {/* Sidebar */}
-        <aside className="sidebar">
+        <aside className="study-sidebar">
             <div className="logo">
             <img src={ReflectifyIcon} alt="Reflectify Logo" />
             </div>
@@ -75,8 +75,8 @@
         {/* Main Content */}
         <main className="main-content study-main">
             {/* Topbar */}
-            <header className="topbar">
-            <div className="search-box">
+            <header className="study-topbar">
+            <div className="study-search-box">
                 <input type="text" placeholder="Search" />
             </div>
             </header>

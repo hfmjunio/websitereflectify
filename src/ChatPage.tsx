@@ -1,5 +1,8 @@
+// ==== Imports ====
 import { Link } from 'react-router-dom';
 import './ChatPage.css';
+
+// ==== Assets ====
 import ReflectifyIcon from './assets/reflogo.png';
 import DashboardIcon from './assets/unslddashlogo.png';
 import ChatIcon from './assets/sldchatslogo.png';
@@ -10,11 +13,13 @@ import AssignIcon from './assets/unsldassignlogo.png';
 import NotifIcon from './assets/unsldnotiflogo.png';
 import LogoutIcon from './assets/unsldlogoutlogo.png';
 
+// ==== Component ====
 export default function ChatPage() {
     return (
-        <div className="dashboard-container">
+        <div className="chat-container">
+
             {/* Sidebar */}
-            <aside className="sidebar">
+            <aside className="chatsidebar">
                 <div className="logo">
                     <img src={ReflectifyIcon} alt="Reflectify Logo" />
                 </div>
@@ -36,7 +41,7 @@ export default function ChatPage() {
                             <Link to="/study" className="nav-link">
                                 <img src={StudyIcon} alt="Study" />
                                 <span>Study</span>
-                                </Link>
+                            </Link>
                         </li>
                         <li>
                             <Link to="/courses" className="nav-link">
@@ -66,17 +71,20 @@ export default function ChatPage() {
                 </nav>
             </aside>
 
-            {/* Chat Layout */}
-            <main className="main-content chat-main">
-                <header className="topbar">
-                    <div className="search-box">
+            {/* Main */}
+            <main className="chat-main">
+
+                {/* Topbar */}
+                <header className="chat-topbar">
+                    <div className="chatsearch-box">
                         <input type="text" placeholder="Search" />
                     </div>
                 </header>
 
-                {/* Full Chat Split Layout */}
+                {/* Body */}
                 <div className="chat-body">
-                    {/* Left Panel */}
+
+                    {/* Left */}
                     <section className="chat-left">
                         <div className="chat-header">
                             <h2 className="chat-title">
@@ -92,7 +100,7 @@ export default function ChatPage() {
                         </div>
                     </section>
 
-                    {/* Right Panel */}
+                    {/* Right */}
                     <section className="chat-right">
                         <div className="chat-header">
                             <h2>Prof. Reyes</h2>

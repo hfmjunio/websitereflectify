@@ -1,6 +1,8 @@
     import { useState } from 'react';
     import { Link } from 'react-router-dom';
     import './CreatesetPage.css';
+
+    // === Assets ===
     import ReflectifyIcon from './assets/reflogo.png';
     import UnSldDashboardIcon from './assets/unslddashlogo.png';
     import UnsldChatIcon from './assets/unsldchatlogo.png';
@@ -12,6 +14,7 @@
     import DeleteLogo from './assets/deletelogo.png';
     import ArrangeLogo from './assets/arrangelogo.png';
 
+    // === Types ===
     interface Flashcard {
     id: number;
     term: string;
@@ -37,18 +40,18 @@
     };
 
     return (
-        <div className="dashboard-container">
-        {/* Sidebar */}
-        <aside className="sidebar">
+        <div className="createset-wrapper">
+        {/* === Sidebar === */}
+        <aside className="createset-sidebar">
             <div className="logo">
             <img src={ReflectifyIcon} alt="Reflectify Logo" />
             </div>
             <nav>
             <ul>
                 <li>
-                    <Link to="/studentdashboard" className="nav-link">
-                <img src={UnSldDashboardIcon} alt="Dashboard Icon" />
-                <span>Dashboard</span>
+                <Link to="/studentdashboard" className="nav-link">
+                    <img src={UnSldDashboardIcon} alt="Dashboard Icon" />
+                    <span>Dashboard</span>
                 </Link>
                 </li>
                 <li>
@@ -83,98 +86,94 @@
             </nav>
         </aside>
 
-        {/* Main Content */}
-        <main className="main-content">
-            <header className="topbar">
-            <div className="search-box">
-                <input type="text" placeholder="Search" />
-            </div>
-            </header>
+        {/* === Main Content === */}
+        <div className="createset-container">
+            <header className="createset-topbar">
+                    <div className="createset-search-box">
+                        <input type="text" placeholder="Search" />
+                    </div>
+                </header>
 
-            <section className="study-container">
-            <div className="study-header">
+            <main className='createset-content'>
+
+
+            <div className="createset-headertitle">
                 <h1>New Study Set</h1>
-            
             </div>
+
             <div className="settitle-box">
-
-            <input type="text" placeholder="Title" />
+                <input type="text" placeholder="Title" />
             </div>
-            
-
-        
-
 
             <section className="card-meta">
-                    {/* Left: Description */}
-                    <div className="meta-left">
-                        <textarea id="description" placeholder="Add a description for your study set..." />
-                    </div>
+                <div className="meta-left">
+                <textarea
+                    id="description"
+                    placeholder="Add a description for your study set..."
+                />
+                </div>
 
-                    {/* Right: Folder + Share */}
-                    <div className="meta-right">
-                        <div className="form-group">
-                        <label htmlFor="folder">Select Folder:</label>
-                        <select id="folder">
-                            <option value="">None</option>
-                            <option value="math">Math</option>
-                            <option value="science">Science</option>
-                            <option value="custom">Custom Folder</option>
-                        </select>
-                        </div>
+                <div className="meta-right">
+                <div className="form-group">
+                    <label htmlFor="folder">Select Folder:</label>
+                    <select id="folder">
+                    <option value="">None</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="custom">Custom Folder</option>
+                    </select>
+                </div>
 
-                        <div className="form-group">
-                        <label htmlFor="share">Share With:</label>
-                        <input
-                            id="share"
-                            type="text"
-                            placeholder="Enter email or username"
-                        />
-                        </div>
-                    </div>
-                    </section>
+                <div className="form-group">
+                    <label htmlFor="share">Share With:</label>
+                    <input
+                    id="share"
+                    type="text"
+                    placeholder="Enter email or username"
+                    />
+                </div>
+                </div>
+            </section>
 
-                    <button className="uploaddocu-btn" onClick={handleAddCard}>
-                        <div className='uplogo'><img src={ReflectifyIcon} alt="Reflectify Logo" />
-</div>
-                    Upload Document
+            <button className="uploaddocu-btn" onClick={handleAddCard}>
+                <div className="uplogo">
+                <img src={ReflectifyIcon} alt="Reflectify Logo" />
+                </div>
+                Upload Document
                 <p>(Supports .pptx, .pdf, .doc, .docx, and .txt)</p>
-                </button>
+            </button>
 
-        <section className='termndesc'>
-            <div className="flashcard-form">
-
-                <div className='delandarr'>
+            <section className="termndesc">
+                <div className="flashcard-form">
+                <div className="delandarr">
                     <button className="delete-btn">
                     <img src={DeleteLogo} alt="Delete Logo" />
                     </button>
-
                     <button className="arrange-btn">
                     <img src={ArrangeLogo} alt="Arrange Logo" />
                     </button>
                 </div>
-                
+
                 <input
-                type="text"
-                placeholder="Term"
-                value={term}
-                onChange={(e) => setTerm(e.target.value)}
+                    type="text"
+                    placeholder="Term"
+                    value={term}
+                    onChange={(e) => setTerm(e.target.value)}
                 />
                 <input
-                type="text"
-                placeholder="Definition"
-                value={definition}
-                onChange={(e) => setDefinition(e.target.value)}
+                    type="text"
+                    placeholder="Definition"
+                    value={definition}
+                    onChange={(e) => setDefinition(e.target.value)}
                 />
 
-
-                <div className='addbtn'>
-                <button className="add-flashcard-btn" onClick={handleAddCard}>
-                +
-                </button>
+                <div className="addbtn">
+                    <button className="add-flashcard-btn" onClick={handleAddCard}>
+                    +
+                    </button>
                 </div>
-            </div>
-        </section>
+                </div>
+            </section>
 
             <div className="flashcards-grid">
                 {flashcards.map((card) => (
@@ -183,16 +182,15 @@
                     <p>{card.definition}</p>
                 </div>
                 ))}
-
-                
             </div>
-                <div className='savebtn'>
+
+            <div className="savebtn">
                 <button className="save-btn" onClick={handleAddCard}>
                 Save
                 </button>
-                </div>
-            </section>
-        </main>
+            </div>
+            </main>
+        </div>
         </div>
     );
     }

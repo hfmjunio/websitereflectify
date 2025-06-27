@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './StudDBPage.css';
+// Assets
 import ReflectifyIcon from './assets/reflogo.png';
 import SldDashboardIcon from './assets/slddashlogo.png';
 import UnsldChatIcon from './assets/unsldchatlogo.png';
@@ -37,14 +38,14 @@ export default function StudDBPage() {
                         </li>
                         <li>
                             <Link to="/study" className="nav-link">
-                            <img src={UnsldStudyIcon} alt="Study Icon" />
-                            <span>Study</span>
+                                <img src={UnsldStudyIcon} alt="Study Icon" />
+                                <span>Study</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/courses" className="nav-link">
-                            <img src={UnsldCoursesIcon} alt="Courses Icon" />
-                            <span>Courses</span>
+                                <img src={UnsldCoursesIcon} alt="Courses Icon" />
+                                <span>Courses</span>
                             </Link>
                         </li>
                         <li>
@@ -63,14 +64,16 @@ export default function StudDBPage() {
                 </nav>
             </aside>
 
-            {/* Main content */}
+            {/* Main Content */}
             <main className="studbmain-content">
-                <header className="topbar">
-                    <div className="search-box">
+                {/* Topbar */}
+                <header className="studtopbar">
+                    <div className="studsearch-box">
                         <input type="text" placeholder="Search" />
                     </div>
                 </header>
 
+                {/* Dashboard Content */}
                 <section className="studdbcontent">
                     {/* Assignments Card */}
                     <div className="card assignments">
@@ -79,7 +82,7 @@ export default function StudDBPage() {
                             <span>See all</span>
                         </div>
                         <div className="assign-list">
-                            <div className="assign-box">WMA1 - Activity #2</div>
+                            <div className="studassign-box">WMA1 - Activity #2</div>
                         </div>
                     </div>
 
@@ -88,7 +91,7 @@ export default function StudDBPage() {
                         <div className="card-header">
                             <h2>Courses</h2>
                             <Link to="/courses" className="nav-link">
-                            <span>See all</span>
+                                <span>See all</span>
                             </Link>
                         </div>
                         <div className="course-list">

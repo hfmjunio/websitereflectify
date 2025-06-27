@@ -1,68 +1,80 @@
+    .createset-container {
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+    }
+
+
 /* ==== TOPBAR ==== */
-.topbar {
+.createset-topbar {
     background: #800000;
     padding: 1rem 1.5rem;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.search-box {
+.createset-search-box {
     background: white;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0rem;
     border-radius: 10px;
     display: flex;
     align-items: center;
     color: #555;
-    width: 80%;
+    width: 30rem;
     max-width: 400px;
     border: 1px solid #ccc;
+    font-family: "Open Sans", sans-serif;
 }
 
-.search-box input {
+.createset-search-box input {
     border: none;
     margin-left: 0.5rem;
     outline: none;
     flex: 1;
+    padding: 0.2rem 0;
 }
 
   /* ==== SIDEBAR ==== */
-.sidebar {
-    width: 80px;
-    min-width: 60px;
+.createset-sidebar {
+    width: 3rem;
     background-color: #800000;
     color: #f1f1f1;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: width 0.3s ease;
 }
 
-.sidebar.collapsed {
+.createset-sidebar.collapsed {
     width: 60px;
 }
 
-.sidebar .logo {
-    width: 45px;
+.createset-sidebar .logo {
+    width: 2.7rem;
     margin-bottom: 2rem;
 }
 
-img {
+.createset-sidebar img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.sidebar ul {
+.createset-sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-.sidebar li {
+.createset-sidebar li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,24 +84,31 @@ img {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.sidebar li:hover img {
+.createset-sidebar li img {
+    width: 2rem;
+    height: auto;
+    margin-bottom: 0.3rem;
+    transition: transform 0.3s ease;
+    padding: 0;
+}
+
+.createset-sidebar li:hover img {
     transform: translateY(-3px);
 }
 
-.sidebar li img {
-    width: 2rem;
-    margin-bottom: 0.3rem;
-}
-
-.sidebar li span {
+.createset-sidebar li span {
     font-size: 0.8rem;
     font-family: "Tilt Warp", sans-serif;
     font-weight: lighter;
     color: #ffffff;
+}
+
+.createset-sidebar li span {
+    font-size: 0.6rem;
     white-space: nowrap;
 }
 
-.sidebar li .nav-link {
+.createset-sidebar li .nav-link {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,17 +116,24 @@ img {
     color: inherit;
 }
 
-
-
     
+    .createset-wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    }
     /* ==== STUDY PAGE MAIN ==== */
-    .study-container {
+
+    .createset-content {
+        padding: 2rem;
+    }
+
+    .createset-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
-    font-family: 'Open Sans', sans-serif;
+    overflow-y: auto;
     background-color: #E9E9E9;
-    min-height: 100vh;
     }
     
 
@@ -124,14 +150,14 @@ img {
     color: #333;
     }
 
-    .study-header {
+    .createset-headertitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     }
 
-    .study-header h1 {
+    .createset-headertitle h1 {
     color: #800000;
     font-size: 2rem;
     font-family: 'Tilt Warp', sans-serif;
@@ -160,17 +186,19 @@ img {
 
     .uploaddocu-btn {
     background-color: #800000;
-    padding: 1rem 0.8rem; /* less vertical padding */
+    padding: 1rem 0.8rem;
     margin-top: 1.5rem;
     border: none;
     border-radius: 0.7rem;
     color: #ffffff;
     font-family: 'Tilt Warp', sans-serif;
-    font-size: 1.2rem; /* slightly smaller text */
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem; /* tighter spacing between elements */
+    gap: 0.25rem;
+    width: 100%;
+
     }
 
     .uplogo img {
@@ -196,7 +224,7 @@ img {
     margin-top: 2rem;
     background: white;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     font-family: 'Tilt Warp', sans-serif;
     color: #800000;
