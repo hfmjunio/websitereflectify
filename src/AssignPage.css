@@ -1,20 +1,32 @@
     /* ===== LAYOUT ===== */
-    .courses-container {
+    .assign-container {
     display: flex;
     height: 100vh;
+    width: 100%;
     overflow: auto;
     }
 
-    .courses-main {
+    .assign-main {
     flex: 1;
     background: #f1f1f1;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    width: 100%;
+    overflow-x: hidden;
+    }
+
+    .assign-main h1{
+        filter: none;
+        color: #800000;
+        display: flex;
+        font-size: 2rem;
+        width: 100%;
+        overflow-x: hidden;
+        margin-top: 1rem
     }
 
     /* ===== SIDEBAR ===== */
-    .courses-sidebar {
+    .assign-sidebar {
     width: 3rem;
     background-color: #800000;
     color: #f1f1f1;
@@ -25,29 +37,29 @@
     transition: width 0.3s ease;
 }
 
-.courses-sidebar.collapsed {
+.assign-sidebar.collapsed {
     width: 60px;
 }
 
-.courses-sidebar .logo {
+.assign-sidebar .logo {
     width: 2.7rem;
     margin-bottom: 2rem;
 }
 
-.courses-sidebar img {
+.assign-sidebar img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.courses-sidebar ul {
+.assign-sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-.courses-sidebar li {
+.assign-sidebar li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +69,7 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.courses-sidebar li img {
+.assign-sidebar li img {
     width: 2rem;
     height: auto;
     margin-bottom: 0.3rem;
@@ -65,23 +77,23 @@
     padding: 0;
 }
 
-.courses-sidebar li:hover img {
+.assign-sidebar li:hover img {
     transform: translateY(-3px);
 }
 
-.courses-sidebar li span {
+.assign-sidebar li span {
     font-size: 0.8rem;
     font-family: "Tilt Warp", sans-serif;
     font-weight: lighter;
     color: #ffffff;
 }
 
-.courses-sidebar li span {
+.assign-sidebar li span {
     font-size: 0.6rem;
     white-space: nowrap;
 }
 
-.courses-sidebar li .nav-link {
+.assign-sidebar li .nav-link {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +102,7 @@
 }
 
     /* ===== TOPBAR ===== */
-    .courses-topbar {
+    .assign-topbar {
     background: #800000;
     padding: 1rem 1.5rem;
     color: white;
@@ -101,9 +113,10 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100%;
     }
 
-    .courses-search-box {
+    .assign-search-box {
     background: white;
     padding: 0.4rem 0rem;
     border-radius: 10px;
@@ -116,7 +129,7 @@
     font-family: "Open Sans", sans-serif;
     }
 
-    .courses-search-box input {
+    .assign-search-box input {
     border: none;
     margin-left: 0.5rem;
     outline: none;
@@ -125,86 +138,56 @@
     }
 
     /* ===== MAIN CONTENT ===== */
-    .course-content {
-    margin: 2rem;
-    width: 100%;
-
-    }
-
-    .card-courses {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    font-family: 'Tilt Warp', sans-serif;
+    .assign-content {
+    margin: 3rem;
     width: auto;
-    margin: 1rem;
-    }
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
 
-    .card-courses hr {
+    .assign-header hr {
     background-color: #800000;
     height: 2px;
     border: none;
+    margin: 1rem;
     }
 
-    .cardcourse-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.3rem;
-    }
-
-    .cardcourse-header h2 {
-    font-weight: bold;
-    color: #800000;
-    font-size: 1.5rem;
-    filter: none;
-    }
-
-    .card-header p {
-    font-weight: normal;
-    color: #000000;
-    font-size: 0.8rem;
-    filter: none;
-    }
-
-    /* ===== COURSE BOXES ===== */
-    .courselists {
+    .upcom-pastd-comp {
+    margin: 1rem;
     display: flex;
     gap: 1rem;
-    margin-top: 0;
-    flex-wrap: wrap; /* wrap into multiple lines if needed */
-    justify-content: center;
+    }
+
+    .upcombtn,
+    .pastdbtn,
+    .compbtn {
+    font-size: 1rem;
     font-family: 'Tilt Warp', sans-serif;
-    }
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    color: #555;
 
-    .course-boxs {
-    background: #e0e0e0;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 10rem;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    cursor: pointer;
-    flex: 0 0 auto;
-    }
 
+    }
+    .upcombtn {
+        background-color: #800000;
+        color: #ffffff;
+
+    }
     .course-box:hover {
     transform: translateY(-3px);
     background-color: #d0d0d0;
     }
 
     @media (max-width: 480px) {
-        .courses-container {
-        flex-direction: column;
+    .assign-container {
+    flex-direction: column;
     }
 
-    .courses-sidebar {
+    .assign-sidebar {
         flex-direction: row;
         width: 100%;
         height: 3.5rem;
@@ -212,45 +195,49 @@
         padding: 0.5rem 0;
     }
 
-    .courses-sidebar .logo {
+    .assign-sidebar .logo {
         margin-bottom: 0;
         width: 2rem;
     }
 
-    .courses-sidebar ul {
+    .assign-sidebar ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
     }
 
-    .courses-sidebar li {
+    .assign-sidebar li {
         flex-direction: column;
         padding: 0.2rem;
     }
 
-    .courses-sidebar li span {
+    .assign-sidebar li span {
         font-size: 0.6rem;
     }
 
-    .courses-main {
+    .assign-main {
         height: auto;
+        width: auto;
     }
 
-    .courses-topbar {
+    .assign-content {
+        width: auto;
+    }
+    .assign-topbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
 
-    .courses-search-box {
+    .assign-search-box {
         width: 100%;
     }
-    .courses-search-box input {
+    .assign-search-box input {
         font-size: 0.9rem;
     }
 
-    .courses-sidebar li span {
+    .assign-sidebar li span {
         display: none;
     }
 
@@ -258,9 +245,5 @@
         width: 100%;
     }
 
-    .course-boxs {
-        height: 1rem;
-        width: 90%;
-    }
 
     }

@@ -67,8 +67,10 @@
                 </Link>
                 </li>
                 <li>
+                    <Link to="/courses" className="nav-link">
                 <img src={UnsldCoursesIcon} alt="Courses Icon" />
                 <span>Courses</span>
+                </Link>
                 </li>
                 <li>
                 <img src={UnsldAssignIcon} alt="Assignments Icon" />

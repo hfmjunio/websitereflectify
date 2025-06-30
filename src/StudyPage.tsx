@@ -51,10 +51,10 @@
                 </Link>
                 </li>
                 <li>
-                <div className="nav-link">
+                <Link to="/courses" className="nav-link">
                     <img src={AssignIcon} alt="Assignments" />
                     <span>Assignments</span>
-                </div>
+                    </Link>
                 </li>
                 <li>
                 <div className="nav-link">
@@ -125,25 +125,25 @@
                 </div>
             </section>
 
-            {/* Right Panel */}
-            <section className="study-right">
-                <div className="fcmain">
-                <div className="fcnocontent">
-                    {selectedFlashcard ? (
-                        <h2>HERE'S UR FLASHCARD: {selectedFlashcard}</h2>
-                    ) : (
-                        <>
-                        <img src={HloIcon} alt="HelloThere Icon" />
-                        <h2>
-                            Hello There!
-                            <br />
-                            Please select your Flashcard to start studying with Reflectify
-                        </h2>
-                        </>
-                    )}
+                {/* Right Panel */}
+                <section className="study-right">
+                    <div className="fcmain">
+                    <div className="fcnocontent">
+                        {selectedFlashcard ? (
+                            <h2>HERE'S UR FLASHCARD: {selectedFlashcard}</h2>
+                        ) : (
+                            <>
+                            <img src={HloIcon} alt="HelloThere Icon" />
+                            <h2>
+                                Hello There!
+                                <br />
+                                Please select your Flashcard to start studying with Reflectify
+                            </h2>
+                            </>
+                        )}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             </div>
         </main>
         </div>

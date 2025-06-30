@@ -313,6 +313,10 @@
     .search-box {
         width: 100%;
     }
+
+    .setsbtn, .foldersbtn, .sharedbtn{
+        font-size: 1rem;
+    }
     }
 
     @media (max-width: 768px) {
@@ -361,6 +365,7 @@
 
     .study-body {
         overflow-y: scroll;
+
     }
 
     .study-search-box {
@@ -418,23 +423,37 @@
     }
 
     .study-main {
-        height: auto;
+        height: 50%;
+    }
+
+    .study-left {
+        height: 100%;
+        width: auto;
     }
 
     .study-body {
         overflow-y: scroll;
+        flex-direction: column;
     }
 
     .study-search-box {
         width: 100%;
     }
 
+    .study-search-box input {
+        font-size: 0.9rem;
+    }
+
     .setsbtn, .foldersbtn, .sharedbtn{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .editandcreate {
         margin: 0.5rem;
+    }
+
+    .fcmain {
+        height: 68vh;
     }
 
 }

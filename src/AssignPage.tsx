@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom';
-import './CoursesPage.css';
+import './AssignPage.css';
 import ReflectifyIcon from './assets/reflogo.png';
 import UnsldDashboardIcon from './assets/unslddashlogo.png';
 import UnsldChatIcon from './assets/unsldchatlogo.png';
 import UnsldStudyIcon from './assets/unsldstudylogo.png';
-import SldCoursesIcon from './assets/sldcourseslogo.png';
-import UnsldAssignIcon from './assets/unsldassignlogo.png';
+import UnsldCoursesIcon from './assets/unsldcourseslogo.png';
+import SldAssignIcon from './assets/sldassignlogo.png';
 import UnsldNotifIcon from './assets/unsldnotiflogo.png';
 import UnsldLogoutIcon from './assets/unsldlogoutlogo.png';
 
-export default function CoursesPage() {
+export default function AssignPage() {
 
     return (
-        <div className="courses-container">
+        <div className="assign-container">
             {/* Sidebar */}
-            <aside className="courses-sidebar">
+            <aside className="assign-sidebar">
                 <div className="logo">
                     <img src={ReflectifyIcon} alt="Reflectify Logo" />
                 </div>
@@ -40,13 +40,13 @@ export default function CoursesPage() {
                         </li>
                         <li>
                             <Link to="/courses" className="nav-link">
-                            <img src={SldCoursesIcon} alt="Courses Icon" />
+                            <img src={UnsldCoursesIcon} alt="Courses Icon" />
                             <span>Courses</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="/assign" className="nav-link">
-                            <img src={UnsldAssignIcon} alt="Assignments Icon" />
+                            <Link to="/courses" className="nav-link">
+                            <img src={SldAssignIcon} alt="Assignments Icon" />
                             <span>Assignments</span>
                             </Link>
                         </li>
@@ -63,33 +63,25 @@ export default function CoursesPage() {
             </aside>
 
             {/* Main content */}
-            <main className="courses-main">
-                <header className="courses-topbar">
-                    <div className="courses-search-box">
+            <main className="assign-main">
+                <header className="assign-topbar">
+                    <div className="assign-search-box">
                         <input type="text" placeholder="Search" />
                     </div>
                 </header>
 
-                <section className="courses-content">
-                    
+            <section className="assign-content">
+                <div className='assign-header'>
+                    <h1>Assignments</h1>
+                    <hr></hr>
+                </div>
 
-                    {/* Courses Card */}
-                    <div className="card-courses">
-                        <div className="cardcourse-header">
-                            <h2>Courses</h2>
-                        </div>
-                        <hr></hr>
-                        <div className="courselists">
 
-                            <div className="course-boxs">CCS</div>
-                            <div className="course-boxs">WMA1</div>
-                            <div className="course-boxs">R2</div>
-                            <div className="course-boxs">WS</div>
-
-                        </div>
-                    </div>
-
-                    
+                <div className="upcom-pastd-comp">
+                <button className="upcombtn">Upcoming</button>
+                <button className="pastdbtn">Past Due</button>
+                <button className="compbtn">Completed</button>
+                </div>
                 </section>
             </main>
         </div>
