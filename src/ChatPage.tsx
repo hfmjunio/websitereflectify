@@ -86,7 +86,7 @@ export default function ChatPage() {
 
                     {/* Left */}
                     <section className="chat-left">
-                        <div className="chat-header">
+                        <div className="chat-leftheader">
                             <h2 className="chat-title">
                                 <img src={UnsldChatIcon} alt="Chat Icon" />
                                 Chats
@@ -102,7 +102,7 @@ export default function ChatPage() {
 
                     {/* Right */}
                     <section className="chat-right">
-                        <div className="chat-header">
+                        <div className="chat-rightheader">
                             <h2>Prof. Reyes</h2>
                             <span className="status">Online</span>
                         </div>

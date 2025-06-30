@@ -1,23 +1,38 @@
-/* ==== Base ==== */
+/* ================= BASE ================= */
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
-/* ==== Container ==== */
+/* ================ LAYOUT ================ */
 .chat-container {
     display: flex;
     height: 100vh;
     overflow: hidden;
 }
 
-/* ==== Sidebar ==== */
+.chat-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.chat-main {
+    flex: 1;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* ============== SIDEBAR ============== */
 .chatsidebar {
     width: 3rem;
     background-color: #800000;
     color: #f1f1f1;
-    padding: 1rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,16 +99,7 @@ body {
     color: inherit;
 }
 
-/* ==== Main ==== */
-.chat-main {
-    flex: 1;
-    background: #f1f1f1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-
-/* ==== Topbar ==== */
+/* ============== TOPBAR ============== */
 .chat-topbar {
     background: #800000;
     padding: 1rem 1.5rem;
@@ -109,7 +115,7 @@ body {
 
 .chatsearch-box {
     background: white;
-    padding: 0.4rem 0rem;
+    padding: 0.4rem 0;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -128,14 +134,7 @@ body {
     padding: 0.2rem 0;
 }
 
-/* ==== Body ==== */
-.chat-body {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-}
-
-/* ==== Left ==== */
+/* ============== LEFT PANEL ============== */
 .chat-left {
     width: 35%;
     background: #ffffff;
@@ -145,9 +144,19 @@ body {
     padding: 1rem;
 }
 
-.chat-header h2 {
-    font-size: 1.4rem;
-    color: #800000;
+.chat-leftheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: #800000;
+    padding: 0.5rem;
+    border-radius: 3rem;
+}
+
+.chat-leftheader h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
     font-family: 'Tilt Warp', sans-serif;
     display: flex;
     align-items: center;
@@ -161,9 +170,11 @@ body {
 
 .chat-left input {
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: 1rem;
     border: 1px solid #ccc;
     font-family: "Open Sans", sans-serif;
+    width: 100%;
+    margin-right: 1rem;
 }
 
 .chat-people-list {
@@ -185,26 +196,27 @@ body {
     background-color: #f0f0f0;
 }
 
-/* ==== Right ==== */
+/* ============== RIGHT PANEL ============== */
 .chat-right {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     background: #D9D9D9;
+    overflow: hidden;
 }
 
-.chat-header {
+.chat-rightheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
     background-color: #800000;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem;
     border-radius: 3rem;
 }
 
-.chat-header h2 {
+.chat-rightheader h2 {
     font-size: 1.2rem;
     color: #ffffff;
     font-family: 'Tilt Warp', sans-serif;
@@ -215,7 +227,7 @@ body {
     color: #00ff00;
 }
 
-/* ==== Conversation ==== */
+/* ============== MESSAGES ============== */
 .chat-conversation {
     flex: 1;
     overflow-y: auto;
@@ -247,7 +259,7 @@ body {
     align-self: flex-end;
 }
 
-/* ==== Input ==== */
+/* ============== MESSAGE INPUT ============== */
 .chat-input {
     display: flex;
     gap: 0.5rem;
@@ -279,29 +291,34 @@ body {
     background-color: #a00000;
 }
 
-/* ==== Responsive ==== */
+/* ============== RESPONSIVE DESIGN ============== */
 
-/* --- Tablet & Down (≤1024px) --- */
+/* Tablets ≤1024px */
 @media (max-width: 1024px) {
     .chatsearch-box {
         width: 100%;
         max-width: 100%;
     }
+
+    .chat-left input {
+        padding: 0.5rem;
+        border-radius: 1.5rem;
+        width: 50%;
+        margin-right: 0.5rem;
+    }
 }
 
-/* --- Small Tablet & Large Phones (≤768px) --- */
+/* Small tablets & large phones ≤768px */
 @media (max-width: 768px) {
-    /* Layout */
     .chat-container {
         flex-direction: column;
     }
 
     .chat-body {
-        flex-direction: column;
+        flex-direction: row;
     }
 
-    .chat-left,
-    .chat-right {
+    .chat-left, .chat-right {
         width: 100%;
     }
 
@@ -310,13 +327,18 @@ body {
         border-bottom: 1px solid #ccc;
     }
 
-    /* Sidebar */
+    .chat-left input {
+        padding: 0.5rem;
+        border-radius: 1.5rem;
+        width: 50%;
+        margin-right: 0.5rem;
+    }
+
     .chatsidebar {
         flex-direction: row;
         width: 100%;
         height: 3.5rem;
         justify-content: space-around;
-        align-items: center;
         padding: 0.5rem 0;
     }
 
@@ -334,19 +356,17 @@ body {
 
     .chatsidebar li {
         flex-direction: column;
-        padding: 0.3rem;
+        padding: 0.2rem;
     }
 
     .chatsidebar li span {
         font-size: 0.6rem;
     }
 
-    /* Topbar */
-    .chattopbar {
+    .chat-topbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
-        padding: 1rem;
     }
 
     .chat-main {
@@ -356,39 +376,63 @@ body {
     .chatsearch-box {
         width: 100%;
     }
-
-    .chatsearch-box input {
-        font-size: 0.85rem;
-    }
 }
 
-/* --- Phones (≤480px) --- */
+/* Phones ≤480px */
 @media (max-width: 480px) {
-    /* Typography */
-    .chat-header h2 {
-        font-size: 1.1rem;
+    .chat-left {
+        width: 30% !important;
+        padding: 0.5rem;
     }
 
-    .chat-header span,
-    .chat-header p {
+    .chat-left input {
+        border-radius: 0.3rem;
+        margin-right: 0;
+        height: 0.5rem;
+    }
+
+    .chat-leftheader {
+        flex-direction: column;
+        padding: 0.5rem;
+        margin: 0;
+        border-radius: 0.5rem;
+    }
+
+    .chat-leftheader h2 {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .chat-title img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .chat-rightheader {
+        border-radius: 1rem;
         font-size: 0.7rem;
     }
 
-    .chatsearch-box input {
-        font-size: 0.75rem;
+    .chat-rightheader h2,
+    .chat-leftheader span,
+    .chat-leftheader p,
+    .chat-rightheader span,
+    .chat-rightheader p {
+        font-size: 0.7rem;
     }
 
     .chatsearch-box {
-        font-size: 0.85rem;
-        padding: 0.3rem 0.7rem;
+        width: 100%;
     }
 
-    /* Sidebar Label Hide */
+    .chatsearch-box input {
+        font-size: 0.9rem;
+    }
+
     .chatsidebar li span {
         display: none;
     }
 
-    /* Chat Bubbles */
     .chat-message {
         font-size: 0.85rem;
         padding: 0.5rem 0.8rem;
@@ -396,10 +440,16 @@ body {
 
     .chat-input input {
         font-size: 0.85rem;
+        width: 100%;
     }
 
     .chat-input button {
         padding: 0.5rem 0.9rem;
         font-size: 0.85rem;
+    }
+
+    .chat-people-list {
+        margin: 0;
+        font-size: 0.8rem;
     }
 }

@@ -73,7 +73,7 @@
         </aside>
 
         {/* Main Content */}
-        <main className="main-content study-main">
+        <main className="study-main">
             {/* Topbar */}
             <header className="study-topbar">
             <div className="study-search-box">
