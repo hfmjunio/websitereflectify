@@ -51,16 +51,16 @@
                 </Link>
                 </li>
                 <li>
-                <Link to="/courses" className="nav-link">
+                <Link to="/assign" className="nav-link">
                     <img src={AssignIcon} alt="Assignments" />
                     <span>Assignments</span>
                     </Link>
                 </li>
                 <li>
-                <div className="nav-link">
+                <Link to="/notif" className="nav-link">
                     <img src={NotifIcon} alt="Notifications" />
                     <span>Notifications</span>
-                </div>
+                </Link>
                 </li>
                 <li className="logout">
                 <div className="nav-link">
@@ -90,12 +90,6 @@
                     <img src={UnsldStudyIcon} alt="Study Icon" />
                     Study
                 </h2>
-                </div>
-
-                <div className="sets-folders-sharedsets">
-                <button className="setsbtn">Sets</button>
-                <button className="foldersbtn">Folders</button>
-                <button className="sharedbtn">Shared Sets</button>
                 </div>
 
                 <div className="flashcards">

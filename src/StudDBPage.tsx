@@ -55,7 +55,7 @@ export default function StudDBPage() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/assign" className="nav-link">
+                            <Link to="/notif" className="nav-link">
                             <img src={UnsldNotifIcon} alt="Notifications Icon" />
                             <span>Notifications</span>
                             </Link>

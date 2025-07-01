@@ -73,12 +73,16 @@
                 </Link>
                 </li>
                 <li>
+                    <Link to="/assign" className="nav-link">
                 <img src={UnsldAssignIcon} alt="Assignments Icon" />
                 <span>Assignments</span>
+                </Link>
                 </li>
                 <li>
+                    <Link to="/notif" className="nav-link">
                 <img src={UnsldNotifIcon} alt="Notifications Icon" />
                 <span>Notifications</span>
+                </Link>
                 </li>
                 <li className="logout">
                 <img src={UnsldLogoutIcon} alt="Logout Icon" />

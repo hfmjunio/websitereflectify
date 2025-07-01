@@ -45,14 +45,16 @@ export default function AssignPage() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/courses" className="nav-link">
+                            <Link to="/assign" className="nav-link">
                             <img src={SldAssignIcon} alt="Assignments Icon" />
                             <span>Assignments</span>
                             </Link>
                         </li>
                         <li>
+                            <Link to="/notif" className="nav-link">
                             <img src={UnsldNotifIcon} alt="Notifications Icon" />
                             <span>Notifications</span>
+                            </Link>
                         </li>
                         <li className="logout">
                             <img src={UnsldLogoutIcon} alt="Logout Icon" />

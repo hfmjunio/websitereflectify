@@ -137,9 +137,17 @@
     padding: 0.2rem 0;
     }
 
+    .assignlists {
+        background-color: #cacaca;
+        margin: 1rem;
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
     /* ===== MAIN CONTENT ===== */
     .assign-content {
-    margin: 3rem;
+    margin: 2rem;
     width: auto;
     background-color: #ffffff;
     height: 100%;

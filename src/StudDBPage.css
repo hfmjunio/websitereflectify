@@ -105,25 +105,12 @@
 }
 
 /* ==== Search ==== */
-.studsearch-box {
-    background: white;
-    padding: 0.4rem 0rem;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    color: #555;
-    width: 30rem;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    font-family: "Open Sans", sans-serif;
-}
 
 .studsearch-box input {
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
     border: none;
-    margin-left: 0.5rem;
-    outline: none;
-    flex: 1;
-    padding: 0.2rem 0;
+    width: 15.625rem;
 }
 
 /* ==== Content ==== */

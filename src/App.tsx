@@ -8,6 +8,7 @@ import CreatesetPage from "./CreatesetPage";
 import StudyPage from "./StudyPage";
 import CoursesPage from "./CoursesPage";
 import AssignPage from "./AssignPage";
+import NotifPage from "./NotifPage";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="/createset" element={<CreatesetPage />} />
       <Route path="/courses" element={<CoursesPage />} />
       <Route path="/assign" element={<AssignPage />} />
+      <Route path="/notif" element={<NotifPage />} />
     </Routes>
     </>
     
