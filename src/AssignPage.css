@@ -182,6 +182,23 @@
     background-color: #d0d0d0;
     }
 
+
+    @media (max-width: 768px) {
+        .assignlists {
+        background-color: #cacaca;
+        margin: 1rem;
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    }
+        .assign-content {
+            margin: 1rem;
+        }
+
+    }
+
+
     @media (max-width: 480px) {
     .assign-container {
     flex-direction: column;
@@ -223,11 +240,13 @@
 
     .assign-content {
         width: auto;
+        margin: 1rem;
     }
     .assign-topbar {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+        width: auto;
     }
 
     .assign-search-box {
@@ -245,5 +264,43 @@
         width: 100%;
     }
 
+    .upcom-pastd-comp {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    }
+
+    .upcombtn,
+    .pastdbtn,
+    .compbtn {
+    font-size: 0.7rem;
+    font-family: 'Tilt Warp', sans-serif;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: #555;
+
+
+
+    }
+    .upcombtn {
+        background-color: #800000;
+        color: #ffffff;
+
+    }
+    .assign-main h1{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .assignlists {
+        background-color: #cacaca;
+        margin: 1rem;
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    }
 
     }
